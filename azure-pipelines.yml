@@ -1,0 +1,138 @@
+trigger:
+  batch: true
+  branches:
+    include:
+      #      - feature/dev-p2
+      - feature/develop-demo-4
+      - master
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+variables:
+  isDevPR: $[eq(variables['System.PullRequest.TargetBranch'], 'feature/develop-demo-4')]
+  isMasterPR: $[eq(variables['System.PullRequest.TargetBranch'], 'master')]
+  isDevBuild: $[eq(variables['Build.SourceBranch'], 'refs/heads/feature/develop-demo-4')]
+  isMasterBuild: $[eq(variables['Build.SourceBranch'], 'refs/heads/master')]
+  isPR: $[eq(variables['Build.Reason'], 'PullRequest')]
+
+stages:
+  - stage: Build
+    condition: and(or(eq(variables.isDevPR, true), eq(variables.isMasterPR, true)), eq(variables.isPR, true))
+    variables:
+      - group: tada-demo-4
+    jobs:
+      - job: All
+        steps:
+          - task: NodeTool@0
+            inputs:
+              versionSpec: '14.15.1'
+            displayName: 'Install Node.js'
+
+          - script: |
+              yarn
+            displayName: 'yarn install'
+
+          # - script: |
+          #     REACT_APP_THEME=truckowner yarn build
+          #     REACT_APP_THEME=tadatruck yarn build
+          #     REACT_APP_THEME=admin yarn build
+          #   displayName: 'yarn build!'
+
+  - stage: Staging_Deploy
+    condition: and(eq(variables.isDevBuild, true), eq(variables.isPR, false))
+    variables:
+      - group: tada-demo-4
+    jobs:
+      - job: All
+        steps:
+          - task: NodeTool@0
+            inputs:
+              versionSpec: '14.15.1'
+            displayName: 'Install Node.js'
+
+          - script: |
+              mkdir truckowner
+              mkdir tadatruck
+              mkdir admin
+              mkdir buildall
+            displayName: 'pre-create folder'
+
+          - script: |
+              yarn
+              REACT_APP_THEME=truckowner yarn build && mv build truckowner
+              REACT_APP_THEME=tadatruck yarn build && mv build tadatruck
+              REACT_APP_THEME=admin yarn build && mv build admin
+            displayName: 'yarn install and build!'
+
+          - script: |
+              mv truckowner buildall
+              mv tadatruck buildall
+              mv admin buildall
+            displayName: 'move to buildall!'
+
+          - task: ArchiveFiles@2
+            displayName: 'Zipping build folder'
+            inputs:
+              rootFolderOrFile: 'buildall'
+              includeRootFolder: false
+              archiveType: 'zip'
+              archiveFile: 'build.zip'
+              replaceExistingArchive: true
+
+          - task: CopyFilesOverSSH@0
+            inputs:
+              sshEndpoint: 'netpower staging 181.173'
+              contents: 'build.zip'
+              targetFolder: '/home/netpower/builds/tada-demo-4/web'
+              readyTimeout: '20000'
+
+          - task: SSH@0
+            inputs:
+              sshEndpoint: 'netpower staging 181.173'
+              runOptions: 'commands'
+              commands: |
+                sh /home/netpower/builds/tada-demo-4/web/tada-demo-4.sh
+              readyTimeout: '20000'
+#
+#  - stage: Prod_Deploy
+#    #    condition: and(eq(variables.isMasterBuild, true), eq(variables.isPR, false))
+#    condition: and(eq(variables.isDevBuild, true), eq(variables.isPR, false))
+#    variables:
+#      - group: prod
+#    jobs:
+#      - job: All
+#        steps:
+#          - task: NodeTool@0
+#            inputs:
+#              versionSpec: '14.15.1'
+#            displayName: 'Install Node.js'
+#
+#          - script: |
+#              yarn
+#              yarn build
+#            displayName: 'yarn install and build!'
+#
+#          - task: ArchiveFiles@2
+#            displayName: 'Zipping build folder'
+#            inputs:
+#              rootFolderOrFile: 'build'
+#              includeRootFolder: false
+#              archiveType: 'zip'
+#              archiveFile: 'build.zip'
+#              replaceExistingArchive: true
+#
+#          - task: CopyFilesOverSSH@0
+#            inputs:
+#              sshEndpoint: '25wiz-prod'
+#              contents: 'build.zip'
+#              targetFolder: '/home/hi5wiz/builds/hi5wiz/web'
+#              readyTimeout: '20000'
+#
+#          - task: SSH@0
+#            inputs:
+#              sshEndpoint: '25wiz-prod'
+#              runOptions: 'commands'
+#              commands: |
+#                sh /home/hi5wiz/builds/hi5wiz/web/hi5wiz.sh
+#              readyTimeout: '20000'

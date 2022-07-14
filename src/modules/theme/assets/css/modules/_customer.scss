@@ -1,0 +1,1266 @@
+$login-background: #fff;
+$op-form-label-color: $c-white-350;
+$op-form-border-color: $c-white-350;
+$op-form-icon-color: $color-yellow-200;
+$op-form-focus-border-color: $color-yellow-200;
+$form-field-error-color: #ff5b6a;
+
+$form-box-shadow: $box-shadow;
+
+//
+// Onepage Component
+// Form on Onepage
+//
+
+.one-page {
+  .form-title {
+    font-weight: $op-form-title-font-weight;
+    font-size: $op-form-title-font-size;
+    // line-height: $op-form-title-line-height;
+    margin: 0 0 30px;
+  }
+
+  .form-group {
+    margin-bottom: 30px;
+    padding: 0;
+    position: relative;
+
+    .ico {
+      position: absolute;
+      right: 0;
+      top: 30px;
+      color: $op-form-icon-color;
+      font-size: 25px;
+    }
+  }
+
+  .form-row {
+    box-shadow: none;
+    padding: 0;
+    margin: 0;
+
+    &:before {
+      display: none;
+    }
+  }
+
+  .form-control {
+    border: 0;
+    border-bottom: 1px solid $op-form-border-color;
+    background: none;
+    border-radius: 0;
+    padding: 0 30px 0 0;
+    width: 100%;
+    background-image: none !important;
+
+    &:focus,
+    &:hover {
+      box-shadow: none;
+      border: 0;
+      border-bottom: 1px solid $op-form-focus-border-color;
+      background: none;
+      border-radius: 0;
+    }
+  }
+
+  .was-validated .form-control:invalid,
+  .form-control.is-invalid {
+    border-bottom: 1px solid $form-field-error-color;
+  }
+
+  .form {
+    padding: $op-form-padding;
+
+    @include media-min($md) {
+      padding: 0;
+      width: 65%;
+      float: right;
+      max-width: 460px;
+      background: $login-background;
+      border-radius: $border-radius;
+      padding: 40px 40px 20px;
+      margin: 0 0 70px;
+      box-shadow: $form-box-shadow;
+    }
+
+    @include media-min($lg) {
+      width: 50%;
+    }
+
+    @include media-min($xl) {
+      margin-right: 120px;
+    }
+
+    label {
+      color: $op-form-label-color;
+      margin: 0;
+      display: block;
+      line-height: 1.5;
+    }
+
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    input:-webkit-autofill:active {
+      -webkit-box-shadow: none !important;
+      -webkit-text-fill-color: none !important;
+      -webkit-box-shadow: 0 0 0px 1000px white inset;
+    }
+
+    .was-validated .form-control:invalid,
+    .form-control.is-invalid {
+      & + .invalid-feedback {
+        @include media-min($xlg) {
+          padding-left: 0;
+        }
+      }
+    }
+  }
+
+  .form-actions {
+    padding: 0;
+
+    .btn-group > .btn-group:not(:last-child) > .btn,
+    .btn-group > .btn:not(:last-child):not(.dropdown-toggle),
+    .btn-group > .btn-group:not(:first-child) > .btn,
+    .btn-group > .btn:not(:first-child) {
+      border-radius: $border-radius-sm;
+    }
+  }
+
+  .form-login {
+    .btn-link {
+      padding: 15px 0 0;
+    }
+
+    .form-group {
+      &.form-group-password {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .form-forgot {
+    p {
+      font-size: 15px;
+      line-height: 1.8;
+      margin: 0 0 35px;
+    }
+
+    .form-title {
+      margin: 0 0 15px;
+    }
+  }
+}
+
+div#__lpform_email,
+div#__lpform_password,
+div#__lpform_confirmPassword {
+  display: none;
+}
+body {
+  &.pink {
+    @include background-gradient(
+      '90deg',
+      $color-pink-start 0,
+      $color-pink-end 100%
+    );
+  }
+  &.orange {
+    background: linear-gradient(
+      90deg,
+      $color-orange-end 0%,
+      $color-orange-end 100%
+    );
+  }
+  &.green {
+    @include background-gradient('90deg', $color-green-start, $color-green-end);
+  }
+  &.blue {
+    @include background-gradient('90deg', $color-blue-start, $color-blue-end);
+  }
+  &.grey {
+    @include background-gradient('90deg', $color-grey-start, $color-grey-end);
+  }
+  &.dark_green {
+    @include background-gradient(
+      '90deg',
+      $color-dark-green-start,
+      $color-dark-green-end
+    );
+  }
+  &.black {
+    @include background-gradient('90deg', $color-black-start, $color-black-end);
+  }
+}
+
+.pink {
+  .one-page .main {
+    box-shadow: 0 5rem 11.67rem 0 #ffbfe5;
+  }
+  .default-reference {
+    .pickup,
+    #pickupAddressText,
+    #personInChargePickup,
+    #personInChargePickupNO {
+      background-color: #ffbfe5 !important;
+    }
+  }
+  .block-selected-order {
+    .item.active {
+      border: unset !important;
+      background-color: #ffbfe5 !important;
+    }
+  }
+  .form.multi-step h4 {
+    color: black;
+  }
+  .copyright,
+  .modal-header {
+    color: black;
+  }
+  &:after,
+  .copyright,
+  .order-summary,
+  label.form-check-label:before,
+  .form.multi-step h4,
+  .modal-header,
+  .jss2,
+  .jss7,
+  .jss8,
+  .jss21,
+  .modal-actions .btn,
+  .makeStyles-active-2 {
+    @include background-gradient('90deg', $color-pink-start, $color-pink-end);
+  }
+  .image {
+    .btn-icon {
+      background: #ffbfe5;
+    }
+  }
+  .search-all {
+    background: #ffbfe5;
+  }
+  .btn {
+    &.btn-primary:not(.btn-icon) {
+      background: #ffbfe5;
+    }
+    &.btn-link {
+      background: white;
+    }
+    &.btn-outline-primary:not(.btn-icon) {
+      border: 1px solid #ffbfe5;
+      color: #ffbfe5;
+    }
+  }
+  .one-page .form-group .ico,
+  .btn-link {
+    color: #ffbfe5;
+  }
+
+  .order-summary {
+    @include background-gradient('90deg', $color-pink-end, $color-pink-end);
+  }
+  .order-summary-tabs a.active {
+    background-image: linear-gradient(
+      90deg,
+      $color-pink-end 0%,
+      $color-pink-end 100%
+    ) !important;
+  }
+
+  .main-menu .item {
+    color: white;
+  }
+  input[type='radio']:checked + label:after {
+    background: linear-gradient(
+      90deg,
+      $color-pink-end 0%,
+      $color-pink-end 100%
+    );
+  }
+  .MuiStepConnector-line {
+    background-image: linear-gradient(
+      90deg,
+      $color-pink-end 0%,
+      $color-pink-end 100%
+    );
+  }
+
+  .menu-items {
+    .item:hover {
+      background: #ffaede;
+    }
+    .active {
+      background: #ffaede !important;
+    }
+  }
+
+  .pagination .page-number.active .page-link {
+    @include background-gradient('90deg', $color-pink-start, $color-pink-end);
+  }
+  .pagination {
+    .page-link {
+      border: 1px solid #f7c6e3;
+      color: black;
+    }
+  }
+  .page-number {
+    background: #ffb9dc 10%;
+    .page-link:hover {
+      @include background-gradient('90deg', $color-pink-start, $color-pink-end);
+    }
+  }
+  .pagination {
+    .page-link:hover {
+      @include background-gradient('90deg', $color-pink-start, $color-pink-end);
+    }
+  }
+
+  .footer {
+    background-color: #ffaede59 !important;
+  }
+  .block-table .order-item.active,
+  td.col-actions .dropdown-menu .dropdown-item:hover {
+    background: #ffaede59 !important;
+  }
+}
+
+.orange {
+  .one-page .main {
+    box-shadow: 0 5rem 11.67rem 0 #ffbe92;
+  }
+  .default-reference {
+    .pickup,
+    #pickupAddressText,
+    #personInChargePickup,
+    #personInChargePickupNO {
+      background-color: #ffbe92 !important;
+    }
+  }
+  .block-selected-order {
+    .item.active {
+      background-color: #ffbe92 !important;
+    }
+  }
+  .order-summary-tabs a.active {
+    background-image: linear-gradient(
+      90deg,
+      $color-orange-end 0%,
+      $color-orange-end 100%
+    ) !important;
+  }
+  &:after,
+  .copyright,
+  .order-summary,
+  .jss2,
+  .jss7,
+  .jss8,
+  .jss21,
+  label.form-check-label:before,
+  .form.multi-step h4,
+  .modal-header,
+  .makeStyles-active-2 {
+    @include background-gradient(
+      '90deg',
+      $color-orange-start,
+      $color-orange-end
+    );
+  }
+  .image {
+    .btn-icon {
+      background: #ffbe92;
+    }
+  }
+  .search-all {
+    background: #ffbe92;
+  }
+  .btn,
+  .search-all,
+  .page-loading {
+    &.btn-primary:not(.btn-icon) {
+      background: #ffbe92;
+    }
+    &.btn-link {
+      background: white;
+    }
+    &.btn-outline-primary:not(.btn-icon) {
+      border: 1px solid #ffbe92;
+      color: #ffbe92;
+    }
+  }
+  .one-page .form-group .ico,
+  .btn-link {
+    color: #ffbe92;
+  }
+
+  .main-menu .item {
+    color: white;
+  }
+  input[type='radio']:checked + label:after {
+    background: linear-gradient(
+      90deg,
+      $color-orange-end 0%,
+      $color-orange-end 100%
+    );
+  }
+  .MuiStepConnector-line {
+    background-image: linear-gradient(
+      90deg,
+      $color-orange-end 0%,
+      $color-orange-end 100%
+    );
+  }
+
+  .menu-items {
+    .item:hover {
+      background: #ff8c3e;
+    }
+    .active {
+      background: #ff8c3e !important;
+    }
+  }
+
+  .pagination .page-number.active .page-link {
+    @include background-gradient(
+      '90deg',
+      $color-orange-start,
+      $color-orange-end
+    );
+  }
+  .pagination {
+    .page-link {
+      border: 1px solid #ffbe92;
+      color: black;
+    }
+  }
+  .page-number {
+    background: #ffbe92 10%;
+    .page-link:hover {
+      @include background-gradient(
+        '90deg',
+        $color-orange-start,
+        $color-orange-end
+      );
+    }
+  }
+  .pagination {
+    .page-link:hover {
+      @include background-gradient(
+        '90deg',
+        $color-orange-start,
+        $color-orange-end
+      );
+    }
+  }
+
+  .footer {
+    background-color: #ffbe927a !important;
+  }
+  .block-table .order-item.active,
+  td.col-actions .dropdown-menu .dropdown-item:hover {
+    background: #ffbe927a !important;
+  }
+}
+
+.green {
+  .one-page .main {
+    box-shadow: 0 5rem 11.67rem 0 #aaff83;
+  }
+  .default-reference {
+    .pickup,
+    #pickupAddressText,
+    #personInChargePickup,
+    #personInChargePickupNO {
+      background-color: #aaff83 !important;
+    }
+  }
+  .block-selected-order {
+    .item.active {
+      background-color: #aaff83 !important;
+    }
+  }
+  .order-summary-tabs a.active {
+    background-image: linear-gradient(
+      90deg,
+      $color-green-end 0%,
+      $color-green-end 100%
+    ) !important;
+  }
+  &:after,
+  .copyright,
+  .order-summary,
+  .modal-header,
+  .jss2,
+  .jss7,
+  .jss8,
+  .jss21,
+  label.form-check-label:before,
+  .form.multi-step h4,
+  .makeStyles-active-2 {
+    @include background-gradient('90deg', $color-green-start, $color-green-end);
+  }
+  .image {
+    .btn-icon {
+      background: #aaff83;
+    }
+  }
+  .search-all {
+    background: #aaff83;
+  }
+  .btn,
+  .page-loading {
+    &.btn-primary:not(.btn-icon) {
+      background: #aaff83;
+    }
+    &.btn-link {
+      background: white;
+    }
+    &.btn-outline-primary:not(.btn-icon) {
+      border: 1px solid #aaff83;
+      color: #aaff83;
+    }
+  }
+  .one-page .form-group .ico,
+  .btn-link {
+    color: #aaff83;
+  }
+
+  .main-menu .item {
+    color: white;
+  }
+  input[type='radio']:checked + label:after {
+    background: linear-gradient(
+      90deg,
+      $color-green-end 0%,
+      $color-green-end 100%
+    );
+  }
+  .MuiStepConnector-line {
+    background-image: linear-gradient(
+      90deg,
+      $color-green-end 0%,
+      $color-green-end 100%
+    );
+  }
+
+  .menu-items {
+    .item:hover {
+      background: #aaff83;
+    }
+    .active {
+      background: #aaff83 !important;
+    }
+  }
+
+  .pagination .page-number.active .page-link {
+    @include background-gradient('90deg', $color-green-start, $color-green-end);
+  }
+  .pagination {
+    .page-link {
+      border: 1px solid #aaff83;
+      color: black;
+    }
+  }
+  .page-number {
+    background: #aaff83 10%;
+    .page-link:hover {
+      @include background-gradient(
+        '90deg',
+        $color-green-start,
+        $color-green-end
+      );
+    }
+  }
+  .pagination {
+    .page-link:hover {
+      @include background-gradient(
+        '90deg',
+        $color-green-start,
+        $color-green-end
+      );
+    }
+  }
+
+  .footer {
+    background-color: #aaff8366 !important;
+  }
+  .block-table .order-item.active,
+  td.col-actions .dropdown-menu .dropdown-item:hover {
+    background: #aaff8366 !important;
+  }
+}
+
+.grey {
+  .one-page .main {
+    box-shadow: 0 5rem 11.67rem 0 #c3cbdc;
+  }
+  .default-reference {
+    .pickup,
+    #pickupAddressText,
+    #personInChargePickup,
+    #personInChargePickupNO {
+      background-color: #c3cbdc !important;
+    }
+  }
+  .block-selected-order {
+    .item.active {
+      border: unset !important;
+      background-color: #c3cbdc !important;
+    }
+  }
+  &:after,
+  .copyright,
+  .modal-header,
+  .jss2,
+  .jss7,
+  .jss8,
+  .jss21,
+  label.form-check-label:before,
+  .form.multi-step h4,
+  .makeStyles-active-2 {
+    @include background-gradient('90deg', $color-grey-start, $color-grey-end);
+  }
+  .order-summary {
+    @include background-gradient('90deg', $color-grey-end, $color-grey-end);
+  }
+  .order-summary-tabs a.active {
+    background-image: linear-gradient(
+      90deg,
+      $color-grey-end 0%,
+      $color-grey-end 100%
+    ) !important;
+  }
+  .pagination {
+    .page-next,
+    .page-last,
+    .page-first,
+    .page-prev {
+      .page-link {
+        border: 1px solid #c3cbdc;
+        color: black;
+      }
+    }
+  }
+  .image {
+    .btn-icon {
+      background: #c3cbdc;
+    }
+  }
+  .search-all {
+    background: #c3cbdc;
+  }
+  .btn,
+  .page-loading {
+    &.btn-primary:not(.btn-icon) {
+      background: #c3cbdc;
+    }
+    &.btn-link {
+      background: white;
+    }
+    &.btn-outline-primary:not(.btn-icon) {
+      border: 1px solid #c3cbdc;
+      color: #c3cbdc;
+    }
+  }
+  .one-page .form-group .ico,
+  .btn-link {
+    color: #c3cbdc;
+  }
+  input[type='radio']:checked + label:after {
+    background: linear-gradient(
+      90deg,
+      $color-grey-end 0%,
+      $color-grey-end 100%
+    );
+  }
+  .MuiStepConnector-line {
+    background-image: linear-gradient(
+      90deg,
+      $color-grey-end 0%,
+      $color-grey-end 100%
+    );
+  }
+
+  .menu-items {
+    .item:hover {
+      background: #c3cbdc;
+    }
+    .active {
+      background: #c3cbdc !important;
+    }
+  }
+
+  .pagination .page-number.active .page-link {
+    background: #99a0ad;
+  }
+  .page-number {
+    background: $color-grey-start 50%;
+    .page-link:hover {
+      @include background-gradient('90deg', $color-grey-start, $color-grey-end);
+    }
+  }
+
+  .footer {
+    background-color: #c3cbdc5c !important;
+  }
+  .block-table .order-item.active,
+  td.col-actions .dropdown-menu .dropdown-item:hover {
+    background: #c3cbdc5c !important;
+  }
+}
+
+.dark_green {
+  .one-page .main {
+    box-shadow: 0 5rem 11.67rem 0 #8abf8f;
+  }
+  .default-reference {
+    .pickup,
+    #pickupAddressText,
+    #personInChargePickup,
+    #personInChargePickupNO {
+      background-color: #8abf8f !important;
+    }
+  }
+  .block-selected-order {
+    .item.active {
+      border: unset !important;
+      background-color: #8abf8f !important;
+    }
+  }
+  &:after,
+  .copyright,
+  .modal-header,
+  label.form-check-label:before,
+  .form.multi-step h4,
+  .jss2,
+  .jss7,
+  .jss8,
+  .jss21,
+  .makeStyles-active-2 {
+    @include background-gradient(
+      '90deg',
+      $color-dark-green-start,
+      $color-dark-green-end
+    );
+  }
+  .order-summary {
+    @include background-gradient(
+      '90deg',
+      $color-dark-green-end,
+      $color-dark-green-end
+    );
+  }
+  .order-summary-tabs a.active {
+    background-image: linear-gradient(
+      90deg,
+      $color-dark-green-end 0%,
+      $color-dark-green-end 100%
+    ) !important;
+  }
+
+  .image {
+    .btn-icon {
+      background: #8abf8f;
+    }
+  }
+  .search-all {
+    background: #8abf8f;
+  }
+  .btn,
+  .page-loading {
+    &.btn-primary:not(.btn-icon) {
+      background: #8abf8f;
+    }
+    &.btn-link {
+      background: white;
+    }
+    &.btn-outline-primary:not(.btn-icon) {
+      border: 1px solid #8abf8f;
+      color: #8abf8f;
+    }
+  }
+  .one-page .form-group .ico,
+  .btn-link {
+    color: #8abf8f;
+  }
+
+  .main-menu .item {
+    color: white;
+  }
+  input[type='radio']:checked + label:after {
+    background: linear-gradient(
+      90deg,
+      $color-dark-green-end 0%,
+      $color-dark-green-end 100%
+    );
+  }
+  .MuiStepConnector-line {
+    background-image: linear-gradient(
+      90deg,
+      $color-dark-green-end 0%,
+      $color-dark-green-end 100%
+    );
+  }
+
+  .menu-items {
+    .item:hover {
+      background: #8abf8f;
+    }
+    .active {
+      background: #8abf8f !important;
+    }
+  }
+
+  .pagination .page-number.active .page-link {
+    background: #8abf8f;
+  }
+  .pagination {
+    .page-next,
+    .page-last,
+    .page-first,
+    .page-prev {
+      .page-link {
+        border: 1px solid #8abf8f;
+        color: black;
+      }
+    }
+  }
+  .page-number {
+    background: #8abf8f 10%;
+    .page-link:hover {
+      @include background-gradient(
+        '90deg',
+        $color-dark-green-start,
+        $color-dark-green-end
+      );
+    }
+  }
+  .pagination {
+    .page-link:hover {
+      @include background-gradient(
+        '90deg',
+        $color-dark-green-start,
+        $color-dark-green-end
+      );
+    }
+  }
+
+  .footer {
+    background-color: #8abf8f !important;
+  }
+  .block-table .order-item.active,
+  td.col-actions .dropdown-menu .dropdown-item:hover {
+    background: #8abf8f !important;
+  }
+}
+
+.black {
+  .one-page .main {
+    box-shadow: 0 5rem 11.67rem 0 #446077;
+  }
+
+  .default-reference {
+    .pickup,
+    #pickupAddressText,
+    #personInChargePickup,
+    #personInChargePickupNO {
+      background-color: #cccccc !important;
+    }
+  }
+  .block-selected-order {
+    .item.active {
+      border: unset !important;
+      background-color: #cccccc !important;
+    }
+  }
+  .default-reference {
+    .pickup,
+    #pickupAddressText,
+    #personInChargePickup,
+    #personInChargePickupNO {
+      background-color: #cccccc !important;
+    }
+  }
+  .block-selected-order {
+    .item.active {
+      background-color: #cccccc !important;
+    }
+  }
+  .form.multi-step h4 {
+    color: white;
+  }
+  .copyright,
+  .modal-header {
+    color: white;
+  }
+  &:after,
+  .copyright,
+  .modal-header,
+  label.form-check-label:before,
+  .form.multi-step h4,
+  .jss2,
+  .jss7,
+  .jss8,
+  .jss21,
+  .makeStyles-active-2 {
+    @include background-gradient('90deg', $color-black-start, $color-black-end);
+  }
+  .order-summary {
+    @include background-gradient('90deg', $color-black-end, $color-black-end);
+  }
+  .order-summary-tabs a.active {
+    background-image: linear-gradient(
+      90deg,
+      $color-black-end 0%,
+      $color-black-end 100%
+    ) !important;
+  }
+  .order-summary,
+  .page-link {
+    color: white;
+  }
+  .image {
+    .btn-icon {
+      background: #cccccc;
+    }
+  }
+  .search-all {
+    background: #cccccc;
+  }
+
+  .btn,
+  .page-loading {
+    &.btn-primary:not(.btn-icon) {
+      background: #446077;
+      color: white;
+    }
+    &.btn-link {
+      background: white;
+    }
+    &.btn-outline-primary:not(.btn-icon) {
+      border: 1px solid #446077;
+      color: #446077;
+    }
+  }
+  .one-page .form-group .ico,
+  .btn-link {
+    color: #446077;
+  }
+  .top-menu {
+    .btn {
+      background: unset !important;
+      color: black !important;
+    }
+  }
+  .main-menu .item {
+    color: white;
+  }
+  input[type='radio']:checked + label:after {
+    background: linear-gradient(
+      90deg,
+      $color-black-end 0%,
+      $color-black-end 100%
+    );
+  }
+  .MuiStepConnector-line {
+    background-image: linear-gradient(
+      90deg,
+      $color-black-end 0%,
+      $color-black-end 100%
+    );
+  }
+
+  .menu-items {
+    .item:hover {
+      background: #446077;
+    }
+    .active {
+      background: #446077 !important;
+    }
+  }
+
+  .pagination .page-number.active .page-link {
+    background: #8e99a2;
+  }
+  .pagination {
+    .page-next,
+    .page-last,
+    .page-first,
+    .page-prev {
+      .page-link {
+        border: 1px solid #8e99a2;
+        color: black;
+      }
+    }
+  }
+  .page-number {
+    background: #446077 10%;
+    .page-link:hover {
+      @include background-gradient(
+        '90deg',
+        $color-black-start,
+        $color-black-end
+      );
+    }
+  }
+  .pagination {
+    .page-link:hover {
+      @include background-gradient(
+        '90deg',
+        $color-black-start,
+        $color-black-end
+      );
+    }
+  }
+  .footer {
+    background-color: #c5c5c5 !important;
+  }
+  .block-table .order-item.active,
+  td.col-actions .dropdown-menu .dropdown-item:hover {
+    background: #c5c5c5 !important;
+  }
+}
+
+.blue {
+  .one-page .main {
+    box-shadow: 0 5rem 11.67rem 0 #05e5cf;
+  }
+  .default-reference {
+    .pickup,
+    #pickupAddressText,
+    #personInChargePickup,
+    #personInChargePickupNO {
+      background-color: #50e8d963 !important;
+    }
+  }
+  .block-selected-order {
+    .item.active {
+      border: unset !important;
+      background-color: #50e8d963 !important;
+    }
+  }
+  .form.multi-step h4 {
+    color: black;
+  }
+  .copyright,
+  .modal-header {
+    color: black;
+  }
+  &:after,
+  .copyright,
+  .modal-header,
+  label.form-check-label:before,
+  .form.multi-step h4,
+  .jss2,
+  .jss7,
+  .jss8 .jss21,
+  .makeStyles-active-2 {
+    @include background-gradient('90deg', $color-blue-start, $color-blue-end);
+  }
+  .order-summary {
+    @include background-gradient('90deg', $color-blue-end, $color-blue-end);
+  }
+  .order-summary-tabs a.active {
+    background-image: linear-gradient(
+      90deg,
+      $color-blue-end 0%,
+      $color-blue-end 100%
+    ) !important;
+  }
+
+  .image {
+    .btn-icon {
+      background: #05e5cf;
+    }
+  }
+  .search-all {
+    background: #05e5cf;
+  }
+
+  .btn,
+  .page-loading {
+    &.btn-primary:not(.btn-icon) {
+      background: #05e5cf;
+    }
+    &.btn-link {
+      background: white;
+    }
+    &.btn-outline-primary:not(.btn-icon) {
+      border: 1px solid #05e5cf;
+      color: #05e5cf;
+    }
+  }
+  .one-page .form-group .ico,
+  .btn-link {
+    color: #05e5cf;
+  }
+
+  .main-menu .item {
+    color: white;
+  }
+  input[type='radio']:checked + label:after {
+    background: linear-gradient(
+      90deg,
+      $color-blue-end 0%,
+      $color-blue-end 100%
+    );
+  }
+  .MuiStepConnector-line {
+    background-image: linear-gradient(
+      90deg,
+      $color-blue-end 0%,
+      $color-blue-end 100%
+    );
+  }
+
+  .menu-items {
+    .item:hover {
+      background: #05e5cf;
+    }
+    .active {
+      background: #05e5cf !important;
+    }
+  }
+
+  .pagination .page-number.active .page-link {
+    @include background-gradient('90deg', $color-blue-start, $color-blue-end);
+  }
+  .pagination {
+    .page-next,
+    .page-last,
+    .page-first,
+    .page-prev {
+      .page-link {
+        border: 1px solid #4ad8ca;
+        color: black;
+      }
+    }
+  }
+  .page-number {
+    background: #4ad8ca 10%;
+    .page-link:hover {
+      @include background-gradient('90deg', $color-blue-start, $color-blue-end);
+    }
+  }
+  .pagination {
+    .page-link:hover {
+      @include background-gradient('90deg', $color-blue-start, $color-blue-end);
+    }
+  }
+
+  .footer {
+    background-color: #4ad8ca4d !important;
+  }
+  .block-table .order-item.active,
+  td.col-actions .dropdown-menu .dropdown-item:hover {
+    background: #4ad8ca4d !important;
+  }
+}
+.box-language {
+  button {
+    background: white !important;
+  }
+}
+
+.quotation-wrapper {
+  margin-bottom: 20px;
+}
+
+.quotation-container-table {
+  padding: 0 !important;
+  font-size: 13px;
+  display: flex;
+  width: 80%;
+  table {
+    margin-bottom: unset !important;
+  }
+  .scroll {
+    overflow-x: scroll;
+    .hidden {
+      display: none !important;
+    }
+    width: 100%;
+  }
+  .fixed {
+    border-spacing: 0;
+  }
+  thead tr {
+    background-color: #f0f3f0;
+    height: 30px;
+    th {
+      border: unset !important;
+      position: relative;
+      &::after {
+        content: '';
+        position: absolute;
+        top: 20%;
+        right: 0;
+        width: 1px;
+        height: 60%;
+        background: rgb(207, 201, 201);
+      }
+    }
+  }
+  .scrollable {
+    width: 100px;
+    border-spacing: 0;
+  }
+  td {
+    min-width: 135px !important;
+  }
+  .x-scroll-click {
+    position: absolute;
+    top: 11px;
+    right: 0;
+    cursor: pointer;
+  }
+}
+
+.head-wrapper {
+  background: #eaeaea;
+  border-radius: 25px;
+  padding-top: 7px;
+  .name-label {
+    font-weight: 600;
+  }
+}
+
+.currency-wrapper {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  .name-label {
+    font-weight: 600;
+    padding-right: 20px;
+  }
+  .quotation-name {
+    border: 1px solid #bfc3cc75;
+    padding: 14px;
+    font-weight: 600;
+    border-radius: 10px;
+  }
+}
+
+.quotation-container-table {
+  thead {
+    th {
+      font-weight: 600;
+    }
+  }
+}
+
+.additional-notes {
+  padding: 0 !important;
+  height: fit-content;
+  thead {
+    background-color: #1b3139;
+    border: unset !important;
+    padding: 0 !important;
+  }
+}
+
+.disable-quotation {
+  a[data-rb-event-key='/quotations'] {
+    display: none;
+  }
+}

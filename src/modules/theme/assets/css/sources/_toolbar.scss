@@ -1,0 +1,38 @@
+.toolbar {
+  .limiter {
+    display: none;
+    margin: 0 0 20px;
+
+    select.form-control {
+      width: calc(100% - 120px);
+      display: inline-block;
+      margin-right: 20px;
+    }
+
+    .limiter-options {
+    }
+
+    .limiter-label {
+      padding: 11px 0;
+      margin: 0;
+    }
+  }
+
+  .toolbar-amount {
+    display: none;
+    @include media-min($sm) {
+      //   display: inline-block;
+      padding: 11px 0 9px;
+    }
+  }
+
+  .limiter {
+    display: none;
+    @include media-min($sm) {
+      //   display: inline-block;
+      min-width: 230px;
+      float: right;
+      margin: 0 0 30px;
+    }
+  }
+}

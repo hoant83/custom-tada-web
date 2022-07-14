@@ -1,0 +1,213 @@
+//
+// Override Boostrap
+//
+
+// Body
+$body-bg: $c-white-100;
+$body-color: $color-blue;
+
+// Link
+$link-color: $color-yellow-200;
+$link-decoration: none;
+$link-hover-color: $color-blue;
+$link-hover-decoration: none;
+
+// Components
+$border-radius: 0.3rem;
+$border-radius-sm: 12px;
+$border-radius-lg: 15px;
+
+$box-shadow: $box-shadow;
+$box-shadow-sm: 0 0.125rem 0.25rem rgba($black, 0.075) !default;
+$box-shadow-lg: 0 1rem 3rem rgba($black, 0.175) !default;
+
+// Typography
+$font-family-base: $font-name, $font-family-sans-serif;
+$font-size-base: 14px !default; // Assumes the browser default, typically `16px`
+// $font-size-lg:                $font-size-base * 1.5;
+// $font-size-sm:                $font-size-base * .875 !default;
+
+// Input
+$input-btn-focus-box-shadow: none;
+
+// Buttons
+$btn-min-width: 150px;
+$btn-border-width: 0;
+$btn-border-radius: $border-radius-sm;
+$btn-border-radius-lg: $border-radius-lg;
+$btn-border-radius-sm: $border-radius-sm;
+$btn-focus-box-shadow: $input-btn-focus-box-shadow;
+$btn-active-box-shadow: $input-btn-focus-box-shadow;
+$btn-padding-y: 12px;
+$btn-padding-x: 25px;
+$btn-font-size: $font-size;
+$btn-line-height: 1.46;
+$btn-font-weight: 500;
+
+$btn-padding-y-lg: 25px;
+$btn-padding-x-lg: 65px;
+$btn-font-size-lg: $font-size-xl;
+$btn-line-height-lg: $line-height-xl;
+// $btn-transition:              color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;
+
+// Forms
+$input-bg: $c-white-500;
+$input-font-size: 14px;
+$input-height: 46px;
+$input-padding-y: 10px;
+$input-padding-x: 20px;
+$input-border-width: 0;
+$input-border-color: $c-white-500;
+$input-color: $text-color;
+$input-placeholder-color: $c-white-300;
+$input-border-radius: $border-radius-sm;
+$input-box-shadow: none;
+$input-label-padding-top: 12px;
+$input-label-padding-bottom: 10px;
+$input-disabled-bg: $c-white-500;
+
+$input-focus-bg: $input-bg;
+$input-focus-color: $text-color;
+$input-focus-border-color: $input-bg;
+$input-focus-box-shadow: none;
+
+$input-height-sm: 38px;
+$input-padding-y-sm: 10px;
+$input-padding-x-sm: 20px;
+$input-padding-top-sm: 10px;
+$input-padding-bottom-sm: 7px;
+$input-border-radius-sm: 7px;
+
+$input-height-lg: 68px;
+$input-padding-y-lg: 10px;
+$input-padding-x-lg: 40px;
+$input-font-size-lg: $font-size-base;
+$input-border-radius-lg: 15px;
+
+$input-label-font-size-lg: $font-size-lg;
+$input-line-height-lg: 34px;
+$input-label-padding-x-lg: 20px;
+$input-label-padding-y-lg: 15px;
+$input-line-margin-lg: 0;
+
+$form-grid-gutter-width: 30px;
+$form-select-bkg-position: 99% 18px;
+
+// Form validation
+$form-validation-valid-border-color: $color-yellow-400;
+$form-validation-valid-color: 1px solid $color-yellow-500;
+$form-validation-invalid-border-color: $c-white-500;
+$form-validation-invalid-color: 1px solid #ff5b6a;
+
+// $form-feedback-margin-top:          $form-text-margin-top !default;
+// $form-feedback-font-size:           $small-font-size !default;
+// $form-feedback-valid-color:         $color-blue;
+// $form-feedback-invalid-color:       $color-blue;
+
+// $form-feedback-icon-valid-color:    $color-blue;
+// $form-feedback-icon-valid:          #fffcf0;
+// $form-feedback-icon-invalid-color:  $form-feedback-invalid-color !default;
+// $form-feedback-icon-invalid:        url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='#{$form-feedback-icon-invalid-color}' viewBox='0 0 12 12'><circle cx='6' cy='6' r='4.5'/><path stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/><circle cx='6' cy='8.2' r='.6' fill='#{$form-feedback-icon-invalid-color}' stroke='none'/></svg>") !default;
+
+// $form-validation-states: () !default;
+// $form-validation-states: map-merge(
+//   (
+//     "valid": (
+//       "color": $form-feedback-valid-color,
+//       "icon": $form-feedback-icon-valid
+//     ),
+//     "invalid": (
+//       "color": $form-feedback-invalid-color,
+//       "icon": $form-feedback-icon-invalid
+//     ),
+//   ),
+//   $form-validation-states
+// );
+
+.tooltip-icon {
+  display: inline-block;
+  color: #7e7e7e;
+  margin: 0 0 0 30px;
+}
+
+.tooltip-inner {
+  background: #1e2e3d;
+  border-radius: $border-radius-sm;
+  padding: 20px;
+}
+
+.unset-after {
+  &::after {
+    background: unset;
+    content: '';
+    display: block;
+    height: 0 !important;
+    width: calc(100% - 30px);
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+.upgrade-tool-tip {
+  z-index: 0 !important;
+  &.in-modal {
+    z-index: 1070 !important;
+  }
+  .tooltip-inner {
+    border-radius: 20px;
+    min-width: 310px !important;
+    div {
+      text-align: center;
+      padding-top: 10px;
+    }
+  }
+}
+
+.modal-license {
+  .form-group {
+    display: inline-flex;
+  }
+  .form-label {
+    width: unset !important;
+    min-width: 145px;
+    line-height: 40px;
+  }
+  .notes-section {
+    .form-label {
+      line-height: 150px;
+    }
+  }
+}
+
+.modal-license {
+  z-index: 2000 !important;
+  .modal-dialog {
+    max-width: 625px;
+  }
+  .modal-header {
+    background: unset !important;
+    border-bottom: unset !important;
+  }
+  .sub-title {
+    text-align: center;
+    padding: 0 40px 0 40px;
+  }
+  .middle {
+    text-align: center;
+  }
+  button {
+    margin-top: 15px;
+  }
+}
+
+#black-box-container {
+  margin-top: 20px;
+  .block-title {
+    text-align: left;
+  }
+  .black-box-check {
+    div {
+      width: 100%;
+    }
+  }
+}

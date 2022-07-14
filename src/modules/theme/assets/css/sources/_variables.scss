@@ -1,0 +1,300 @@
+//
+// Variables
+//
+// Color system
+$c-white-100: #f8f9fa;
+$c-white-200: #ddd;
+$c-white-300: #7e7e7e;
+$c-white-400: #eee;
+$c-white-500: #f8f8f8;
+$c-white-600: #8a8b8e;
+$c-white-700: #747474;
+$c-white-800: #e0e0e0;
+$c-white-900: #848484;
+$c-white-050: rgba($c-white-200, 0.5);
+$c-white-350: rgba($c-white-300, 0.3);
+$color-yellow: #fab91a;
+$color-yellow-100: #ffd424;
+$color-yellow-200: #e9b91f;
+$color-yellow-300: #ce920c;
+$color-yellow-400: #fffcf0;
+$color-yellow-500: #fee589;
+$color-yellow-600: #fef3d3;
+$color-yellow-050: rgba($color-yellow-200, 0.5);
+$color-blue: #0a2e3d;
+$color-orange: #e06729;
+$color-orange-100: #ee946f;
+$color-orange-200: #f8b69f;
+$color-orange-hover: #f8b69f;
+$color-orange-border: #ffe7d5;
+$color-truck-bg: #2f4858;
+
+$color-pink-start: #ff0080;
+$color-pink-end: #ff3eaf;
+
+$color-orange-start: #f94327;
+$color-orange-end: #ff7d14;
+
+$color-green-start: #00b712;
+$color-green-end: #5aff15;
+
+$color-blue-start: #028090;
+$color-blue-end: #00bfb2;
+
+$color-grey-start: #c3cbdc;
+$color-grey-end: #edf1f4;
+
+$color-dark-green-start: #233329;
+$color-dark-green-end: #63d471;
+
+$color-black-start: #000000;
+$color-black-end: #2c3e50;
+
+// Spacing
+$indent-base: 20px;
+$indent-xs: 10px;
+$indent-sm: 30px;
+$indent-md: 35px;
+$indent-lg: 40px;
+
+// Fonts
+$font-size: 14px;
+$line-height: 19px;
+
+$font-size-xl: 24px;
+$line-height-xl: 28px;
+
+$font-size-lg: 20px;
+$line-height-lg: 24px;
+
+$font-size-xxl: 36px;
+$line-height-xxl: 44px;
+
+$font-size-sm: 14px;
+$line-height-sm: 17px;
+
+$font-size-xx: 30px;
+$line-height-xx: 46px;
+
+$font-size-mx: 18px;
+
+// Breakpoints
+$xs: 0;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1600px;
+$xlg: 1440px;
+
+$max-wdith: 1557px;
+
+// Fonts
+$font-name: 'SVN-Poppins';
+$font-name-id-pri: 'MoeumTR';
+$font-name-id-sec: 'ExpoM';
+$font-icon-name: 'tada';
+$font-icon-family: $font-icon-name;
+
+// Icons
+$icon-edit-price: '\e842';
+$icon-vat1: '\e843';
+$icon-phone: '\e940';
+$icon-user-email: '\e914';
+$icon-mg-order: '\e91b';
+$icon-new-order: '\e936';
+$icon-order-info: '\e937';
+$icon-assign: '\e938';
+$icon-job: '\e939';
+$icon-o-close: '\e93a';
+$icon-o-down: '\e93b';
+$icon-o-prev: '\e93c';
+$icon-o-up: '\e93d';
+$icon-o-next: '\e93e';
+$icon-profile: '\e93f';
+$icon-logout: '\e934';
+$icon-term: '\e935';
+$icon-menu: '\e933';
+$icon-accounts: '\e900';
+$icon-add: '\e901';
+$icon-arrow-down: '\e902';
+$icon-arrow-up: '\e903';
+$icon-avatar: '\e904';
+$icon-checked: '\e905';
+$icon-clone: '\e906';
+$icon-delete: '\e907';
+$icon-delivered: '\e908';
+$icon-delivery: '\e909';
+$icon-edit: '\e90a';
+$icon-publish: '\e92e';
+$icon-email: '\e90b';
+$icon-faq: '\e90c';
+$icon-find-driver: '\e90d';
+$icon-first: '\e90e';
+$icon-larrow-next: '\e90f';
+$icon-larrow-prev: '\e910';
+$icon-last: '\e911';
+$icon-map-note: '\e912';
+$icon-new-order-2: '\e913';
+$icon-next-2: '\e915';
+$icon-next: '\e916';
+$icon-noti-order: '\e917';
+$icon-noti-system: '\e918';
+$icon-noti: '\e919';
+$icon-o-arrive-pickup: '\e91a';
+$icon-credit-card: '\e941';
+$icon-o-dispatched: '\e91c';
+$icon-orders: '\e91d';
+$icon-password: '\e91e';
+$icon-pickup: '\e91f';
+$icon-plus: '\e920';
+$icon-prev: '\e921';
+$icon-quick: '\e922';
+$icon-report: '\e923';
+$icon-reset: '\e924';
+$icon-search: '\e925';
+$icon-setting: '\e926';
+$icon-standard: '\e927';
+$icon-start-delivering: '\e928';
+$icon-tarrow-down: '\e929';
+$icon-tarrow-left: '\e92a';
+$icon-tarrow-right: '\e92b';
+$icon-tarrow-up: '\e92c';
+$icon-update: '\e92d';
+$icon-upload: '\e92e';
+$icon-chevron-with-circle-down: '\e92f';
+$icon-chevron-with-circle-left: '\e930';
+$icon-chevron-with-circle-right: '\e931';
+$icon-chevron-with-circle-up: '\e932';
+$icon-yes-circle: '\e800';
+$icon-import: '\e844';
+$icon-next-solid: '\e802';
+$icon-down-solid: '\e801';
+$icon-quotation: '\e845';
+$icon-tracking: '\e846';
+$icon-verified: '\e847';
+
+// Text
+$text-color: $color-blue;
+
+// Buttons
+$btn-icon-margin: 0 0 $indent-xs 5px;
+$btn-icon-right: -$indent-base + 10px;
+$btn-icon-font-size: 19px;
+
+$btn-color: $text-color;
+$btn-background-start: $color-yellow;
+$btn-background-end: $color-yellow-100;
+$btn-background-start-quick: $color-yellow;
+$btn-background-end-quick: $color-yellow-100;
+$btn-hover-color: $white;
+$btn-hover-background: $color-blue;
+
+$btn-disabled-background: $white;
+$btn-disabled-color: $c-white-200;
+$btn-disabled-border: 1px solid $c-white-200;
+
+$btn-secondary-background: none;
+$btn-secondary-color: $color-yellow-200;
+$btn-secondary-border: 1px solid $color-yellow-200;
+$btn-secondary-hover-border: 1px solid $color-blue;
+
+$button-colors: (
+  'primary': (),
+  'secondary': (
+    'background': $btn-secondary-background,
+    'color': $btn-secondary-color,
+    'border': $btn-secondary-border,
+  ),
+  'success': null,
+  'info': null,
+  'warning': null,
+  'danger': null,
+  'light': null,
+  'dark': null,
+);
+
+$button-hover-colors: (
+  'primary': (),
+  'secondary': (
+    'border': $btn-secondary-hover-border,
+  ),
+  'success': null,
+  'info': null,
+  'warning': null,
+  'danger': null,
+  'light': null,
+  'dark': null,
+);
+
+// Theme
+$bkg-overlap-url: '../../images/bkg-overlap.png';
+$box-shadow: 0 0 25px rgba(221, 221, 221, 0.65);
+$box-main-shadow: 0 5rem 11.67rem 0 $color-yellow-300;
+
+$op-main-bkg: $white;
+$op-main-bkg-url: '../../images/login-bkg.png';
+$op-main-min-height-xl: 775px;
+
+$op-background-start: $color-yellow-100;
+$op-background-end: $color-yellow;
+
+$op-bkg-size: 440px;
+$op-bkg-sise-md: 100%;
+
+$op-logo-width: 140px;
+$op-logo-margin: 0 0 $indent-sm + 5px;
+$op-logo-width-sm: 160px;
+
+$op-nobkg-min-height: 600px;
+$op-nobkg-background: $white;
+
+$op-form-width: 60%;
+$op-form-max-width: 460px;
+$op-form-padding: 150px 0 0;
+$op-form-background: $white;
+
+$op-form-padding-md: $indent-lg;
+$op-form-margin-md: 0 0 70px;
+$op-form-box-shadow-md: 0 0 40px $c-white-200;
+
+$op-form-margin-xl: 0 120px 70px 0;
+
+$op-form-title-font-size: $font-size-lg;
+$op-form-title-line-height: $line-height-xl;
+$op-form-title-font-weight: bold;
+
+// Forms
+$form-group-box-shadow: 0 0 40px $c-white-200;
+$form-group-padding: $indent-lg;
+$form-group-margin: 0 0 $indent-lg;
+
+$input-font-size-sm: $font-size;
+$form-select-bkg: $c-white-500 url(../../images/arrow-down.svg) 100% 12px
+  no-repeat;
+$form-select-bkg-size: 45px;
+$form-select-multiple: $c-white-500;
+
+// Thank you page
+$thankyou-bkg: $white;
+
+// Sidebar
+$sidebar-width-lg: 180px;
+$sidebar-width-xl: 200px;
+
+// Main Content - Block
+$block-box-shadow: 0 0 25px $c-white-200;
+
+$block-title-font-size: 30px;
+$block-title-line-height: 36px;
+$block-title-font-weight: 700;
+
+// Manage Order - Tracking
+$mg-order-border: 1px solid #efefef;
+$mg-order-value-color: $c-white-900;
+
+$mg-process-color: $text-color;
+$mg-process-disable-color: $c-white-800;
+$mg-process-icon-font-size: 45px;
+$mg-process-icon-border: 1px solid $text-color;
+$mg-process-disable-icon-border: 1px solid $c-white-800;

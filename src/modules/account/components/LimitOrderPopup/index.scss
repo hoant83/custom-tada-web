@@ -1,0 +1,14 @@
+.line-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: 8;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.read-more {
+  color: rgb(66, 133, 244);
+  text-decoration: underline;
+  &:hover {
+    cursor: pointer;
+  }
+}

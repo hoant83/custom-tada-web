@@ -1,0 +1,289 @@
+// stylelint-disable selector-no-qualifying-type
+
+//
+// Base styles
+//
+
+.btn {
+
+
+  &.filter-btn {
+    margin-top: 5px;
+
+    @include media-max($xl) {
+      font-size: 12px;
+      padding: 13px 5px;
+      min-width: 85px;
+      white-space: normal;
+      word-wrap: break-word;
+      max-width: 100%;
+    }
+
+    @include media-min($xl) {
+      font-size: 12px;
+      padding: 13px 5px;
+      min-width: 115px;
+      white-space: normal;
+      word-wrap: break-word;
+      max-width: 100%;
+    }
+
+    @include media-min($xlg) {
+      font-size: 14px;
+      padding: 13px 5px;
+      white-space: normal;
+      word-wrap: break-word;
+      max-width: 100%;
+      min-width: 128px;
+    }
+  }
+
+  display: inline-block;
+  font-family: $btn-font-family;
+  font-weight: $btn-font-weight;
+  color: $body-color;
+  text-align: center;
+  text-decoration: if($link-decoration==none, null, none);
+  white-space: $btn-white-space;
+  vertical-align: middle;
+  user-select: none;
+  border: $btn-border-width solid transparent;
+  min-width: $btn-min-width;
+  @include button-size($btn-padding-y,
+    $btn-padding-x,
+    $btn-font-size,
+    $btn-line-height,
+    $btn-border-radius);
+  @include transition($btn-transition);
+  @include background-gradient('-90deg',
+    $btn-background-start-quick,
+    $btn-background-end-quick);
+
+  @include hover() {
+    color: $btn-hover-color;
+    background: $btn-hover-background;
+    text-decoration: none;
+  }
+
+  &:focus,
+  &.focus {
+    outline: 0;
+  }
+
+  // Disabled comes first so active can properly restyle
+  &.disabled,
+  &:disabled {
+    @include box-shadow(none);
+    opacity: 1;
+    background: $btn-disabled-background;
+    color: $btn-disabled-color;
+    border: $btn-disabled-border;
+
+    &:hover {
+      text-decoration: none;
+      border: $btn-disabled-border;
+    }
+  }
+
+  &:not(:disabled):not(.disabled) {
+    cursor: if($enable-pointer-cursor-for-buttons, pointer, null);
+
+    &:active,
+    &.active {
+      @include box-shadow(none);
+
+      &:focus {
+        @include box-shadow(none);
+      }
+    }
+  }
+
+  .ico {
+    font-size: $btn-icon-font-size;
+    margin: $btn-icon-margin;
+    position: relative;
+    top: 3px;
+    right: $btn-icon-right;
+  }
+}
+
+// Future-proof disabling of clicks on `<a>` elements
+a.btn.disabled,
+fieldset:disabled a.btn {
+  pointer-events: none;
+}
+
+//
+// Alternate buttons
+//
+
+@each $color,
+$value in $button-colors {
+  .btn-#{$color} {
+    @include npw-button-variant($value);
+  }
+}
+
+@each $color,
+$value in $button-hover-colors {
+  .btn-#{$color}:hover {
+    @include npw-button-variant($value);
+  }
+}
+
+@each $color,
+$value in $theme-colors {
+  .btn-outline-#{$color} {
+    @include button-outline-variant($value);
+  }
+}
+
+//
+// Link buttons
+//
+
+// Make a button look and behave like a link
+.btn-link {
+  font-weight: $font-weight-normal;
+  color: $link-color;
+  text-decoration: $link-decoration;
+  padding: 0;
+  background: none;
+  border: 0;
+  min-width: auto;
+
+  @include hover() {
+    color: $link-hover-color;
+    text-decoration: $link-hover-decoration;
+    background: none;
+  }
+
+  &:focus,
+  &.focus {
+    text-decoration: $link-hover-decoration;
+  }
+
+  &:disabled,
+  &.disabled {
+    color: $btn-link-disabled-color;
+    pointer-events: none;
+  }
+
+  // No need for an active state here
+}
+
+//
+// Button Sizes
+//
+
+.btn-lg {
+  @include button-size($btn-padding-y-lg,
+    $btn-padding-x-lg,
+    $btn-font-size-lg,
+    $btn-line-height-lg,
+    $btn-border-radius-lg);
+}
+
+.btn-sm {
+  @include button-size($btn-padding-y-sm,
+    $btn-padding-x-sm,
+    $btn-font-size-sm,
+    $btn-line-height-sm,
+    $btn-border-radius-sm);
+}
+
+//
+// Block button
+//
+
+.btn-block {
+  display: block;
+  width: 100%;
+
+  // Vertically space out multiple block buttons
+  +.btn-block {
+    margin-top: $btn-block-spacing-y;
+  }
+}
+
+// Specificity overrides
+input[type='submit'],
+input[type='reset'],
+input[type='button'] {
+  &.btn-block {
+    width: 100%;
+  }
+}
+
+.btn-lg {
+  .ico {
+    font-size: 26px;
+    margin: 0 0 0 10px;
+  }
+}
+
+.btn-lg,
+.btn-group-lg>.btn {
+  padding: 21px 50px;
+}
+
+.btn-icon.btn {
+  background: none;
+  padding: 0;
+  box-shadow: 0;
+  min-width: auto;
+
+  &:hover {
+    color: inherit;
+  }
+
+  .ico-edit {
+    color: #606060;
+
+    &:hover {
+      color: $text-color;
+    }
+  }
+
+  .ico-publish {
+    color: #606060;
+
+    &:hover {
+      color: $text-color;
+    }
+  }
+
+  .ico-delete {
+    color: #ff0000;
+
+    &:hover {
+      color: $text-color;
+    }
+  }
+
+  &+.btn-icon.btn {
+    margin: 0 0 0 10px;
+  }
+
+  .ico {
+    right: 0;
+  }
+}
+
+$btn-ol-primary-border-color: 1px solid $color-yellow-200;
+$btn-ol-primary-color: $color-yellow-200;
+$btn-ol-primary-hover-border-color: 1px solid $color-blue;
+$btn-ol-primary-hover-color: $color-blue;
+
+.btn-outline-primary {
+  background: none;
+  border: $btn-ol-primary-border-color;
+  color: $btn-ol-primary-color;
+  padding: 11px 30px;
+
+  &:hover {
+    background: none;
+    border: $btn-ol-primary-hover-border-color;
+    color: $btn-ol-primary-hover-color;
+  }
+}

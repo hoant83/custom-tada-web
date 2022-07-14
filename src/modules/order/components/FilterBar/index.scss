@@ -1,0 +1,131 @@
+.special {
+  margin-right: 10px;
+
+  .form-control {
+    margin-bottom: 0;
+  }
+
+  .dropdown-menu.show {
+    width: 300px;
+    padding: 0;
+    background-color: #fff !important;
+  }
+
+  &.from-to .dropdown-menu.show {
+    width: 400px;
+  }
+
+  &:not(.from-to) {
+    input {
+      min-width: 150px !important;
+      width: 85%;
+    }
+
+    button.light-border {
+      margin-top: 2% !important;
+      margin-right: 5px;
+    }
+  }
+
+  &.from-to {
+    input {
+      margin-top: 5px;
+      background-color: #f8f8f8 !important;
+      border: 1px solid grey !important;
+      width: 95%;
+    }
+  }
+
+  button {
+    // width: unset !important;
+    background: transparent !important;
+    border: 1px solid gray;
+
+    &:hover {
+      color: black;
+    }
+  }
+
+  input {
+    background-color: unset !important;
+    border: unset !important;
+  }
+
+  &.from-to .row {
+    margin-bottom: 10px;
+  }
+
+  .unset-after {
+    padding: 20px;
+
+    .form-check {
+      border-bottom: 1px solid grey;
+    }
+  }
+}
+
+.clear-filter-button {
+  display: inline-block;
+  margin-left: 30px;
+}
+
+.center-text {
+  text-align: center;
+  margin: auto;
+}
+
+.search-button {
+  width: 48px !important;
+  min-width: unset !important;
+}
+
+.light-border {
+  border: 1px solid #e9b91f !important;
+  color: #e9b91f !important;
+  width: 30px;
+  height: 30px;
+  padding-top: 5px;
+  border-radius: 5px;
+  float: right;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.input-group {
+
+  @media only screen and (max-width: 1200px) {
+    display: -webkit-inline-box !important;
+  }
+}
+
+.link-button {
+  border: none !important;
+
+  text-decoration: underline;
+
+  &.select-all {
+    color: green;
+  }
+
+  &.deselect-all {
+    color: red;
+  }
+}
+
+.search-all {
+  padding-top: 4px;
+  width: 48px;
+  min-width: unset !important;
+  height: 48px;
+  border-radius: 12px;
+  margin-left: 10px;
+  font-size: 24px;
+  background: linear-gradient(-90deg, #fab91a 0, #fab91a 100%);
+  border: none;
+
+  &:focus {
+    outline: none;
+  }
+}

@@ -1,0 +1,185 @@
+@font-face {
+    font-family: $font-name;
+    src: url('../../fonts/SVN-PoppinsBoldItalic.woff2') format('woff2'),
+        url('../../fonts/SVN-PoppinsBoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: $font-name;
+    src: url('../../fonts/SVN-PoppinsBlackItalic.woff2') format('woff2'),
+        url('../../fonts/SVN-PoppinsBlackItalic.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: $font-name;
+    src: url('../../fonts/SVN-PoppinsBlack.woff2') format('woff2'),
+        url('../../fonts/SVN-PoppinsBlack.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: $font-name;
+    src: url('../../fonts/SVN-PoppinsBold.woff2') format('woff2'),
+        url('../../fonts/SVN-PoppinsBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: $font-name;
+    src: url('../../fonts/SVN-PoppinsExtraBoldItalic.woff2') format('woff2'),
+        url('../../fonts/SVN-PoppinsExtraBoldItalic.woff') format('woff');
+    font-weight: 800;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: $font-name;
+    src: url('../../fonts/SVN-PoppinsExtraBold.woff2') format('woff2'),
+        url('../../fonts/SVN-PoppinsExtraBold.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: $font-name;
+    src: url('../../fonts/SVN-PoppinsExtraLightItalic.woff2') format('woff2'),
+        url('../../fonts/SVN-PoppinsExtraLightItalic.woff') format('woff');
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: $font-name;
+    src: url('../../fonts/SVN-PoppinsExtraLight.woff2') format('woff2'),
+        url('../../fonts/SVN-PoppinsExtraLight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: $font-name;
+    src: url('../../fonts/SVN-PoppinsItalic.woff2') format('woff2'),
+        url('../../fonts/SVN-PoppinsItalic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: $font-name;
+    src: url('../../fonts/SVN-PoppinsLightItalic.woff2') format('woff2'),
+        url('../../fonts/SVN-PoppinsLightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: $font-name;
+    src: url('../../fonts/SVN-PoppinsLight.woff2') format('woff2'),
+        url('../../fonts/SVN-PoppinsLight.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: $font-name;
+    src: url('../../fonts/SVN-PoppinsMediumItalic.woff2') format('woff2'),
+        url('../../fonts/SVN-PoppinsMediumItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: $font-name;
+    src: url('../../fonts/SVN-PoppinsMedium.woff2') format('woff2'),
+        url('../../fonts/SVN-PoppinsMedium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: $font-name;
+    src: url('../../fonts/SVN-PoppinsSemiBoldItalic.woff2') format('woff2'),
+        url('../../fonts/SVN-PoppinsSemiBoldItalic.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: $font-name;
+    src: url('../../fonts/SVN-Poppins.woff2') format('woff2'),
+        url('../../fonts/SVN-Poppins.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: $font-name;
+    src: url('../../fonts/SVN-PoppinsThin.woff2') format('woff2'),
+        url('../../fonts/SVN-PoppinsThin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: $font-name;
+    src: url('../../fonts/SVN-PoppinsSemiBold.woff2') format('woff2'),
+        url('../../fonts/SVN-PoppinsSemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: $font-name;
+    src: url('../../fonts/SVN-PoppinsThinItalic.woff2') format('woff2'),
+        url('../../fonts/SVN-PoppinsThinItalic.woff') format('woff');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: $font-icon-name;
+    src: url('../../fonts/tada-fontello.woff2?966159') format('woff2'),
+        url('../../fonts/tada-fontello.woff?966159') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: $font-name-id-pri;
+    src: url('../../fonts/ExpoM-HM.woff2') format('woff2'),
+        url('../../fonts/ExpoM-HM.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: $font-name-id-sec;
+    src: url('../../fonts/MoeumTR-HM.woff2') format('woff2'),
+        url('../../fonts/MoeumTR-HM.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

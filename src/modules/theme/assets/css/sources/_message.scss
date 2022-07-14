@@ -1,0 +1,15 @@
+.alert-dismissible {
+  .close {
+    outline: none;
+  }
+}
+
+.alert {
+  min-height: 45px;
+}
+
+.one-page {
+  .alert {
+    margin: 0 0 40px;
+  }
+}

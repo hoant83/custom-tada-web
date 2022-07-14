@@ -1,0 +1,234 @@
+import { ErrorDto } from '@/modules/message/message.dto';
+import { ERRORS } from '@/modules/message/message.enum';
+import { I18N } from '@/modules/lang/i18n.enum';
+
+export const Errors: ErrorDto[] = [
+  {
+    key: ERRORS.SELECTED_ITEMS,
+    label: I18N.MESSAGES_SELECTED_ITEMS,
+  },
+  {
+    key: ERRORS.FORGOT_SUCCESS,
+    label: I18N.MESSAGES_FORGOT_SUCCESS,
+  },
+  {
+    key: ERRORS.CONFIRM_DELETE,
+    label: I18N.MESSAGES_CONFIRM_DELETE,
+  },
+  {
+    key: ERRORS.CONFIRM_CANCEL,
+    label: I18N.MESSAGES_CONFIRM_CANCEL,
+  },
+  {
+    key: ERRORS.DELETE_SUCCESS,
+    label: I18N.MESSAGES_DELETE_SUCCESS,
+  },
+  {
+    key: ERRORS.UPDATE_SUCCESS,
+    label: I18N.MESSAGES_UPDATE_SUCCESS,
+  },
+  {
+    key: ERRORS.CREATED_SUCCESS,
+    label: I18N.MESSAGES_CREATED_SUCCESS,
+  },
+  {
+    key: ERRORS.IMAGE_SIZE,
+    label: I18N.MESSAGES_IMAGE_SIZE,
+  },
+  {
+    key: ERRORS.LOGIN_FAIL,
+    label: I18N.MESSAGES_LOGIN_FAIL,
+  },
+  {
+    key: ERRORS.CREATE_ERROR,
+    label: I18N.MESSAGES_CREATE_ERROR,
+  },
+  {
+    key: ERRORS.EMAIL_EXIST,
+    label: I18N.MESSAGES_EMAIL_EXIST,
+  },
+  {
+    key: ERRORS.INVALID,
+    label: I18N.MESSAGES_INVALID,
+  },
+  {
+    key: ERRORS.NOT_FOUND,
+    label: I18N.MESSAGES_NOT_FOUND,
+  },
+  {
+    key: ERRORS.ERROR,
+    label: I18N.MESSAGES_ERROR,
+  },
+  {
+    key: ERRORS.SELF_DELETE,
+    label: I18N.MESSAGES_SELF_DELETE,
+  },
+  {
+    key: ERRORS.SUPER_ADMIN_DELETE,
+    label: I18N.MESSAGES_SUPER_ADMIN_DELETE,
+  },
+  {
+    key: ERRORS.COMPANY_EXIST,
+    label: I18N.MESSAGES_COMPANY_EXIST,
+  },
+  {
+    key: ERRORS.ORDER_NOT_FOUND,
+    label: I18N.MESSAGES_ORDER_NOT_FOUND,
+  },
+  {
+    key: ERRORS.DRIVER_NOT_FOUND,
+    label: I18N.MESSAGES_DRIVER_NOT_FOUND,
+  },
+  {
+    key: ERRORS.PHONE_EXIST,
+    label: I18N.MESSAGES_PHONE_EXIST,
+  },
+  {
+    key: ERRORS.EXISTED,
+    label: I18N.MESSAGES_EXISTED,
+  },
+  {
+    key: ERRORS.TRUCK_OWNER_NOT_FOUND,
+    label: I18N.MESSAGES_TRUCK_OWNER_NOT_FOUND,
+  },
+  {
+    key: ERRORS.CREATE_ORDER_ERROR,
+    label: I18N.MESSAGES_CREATE_ORDER_ERROR,
+  },
+  {
+    key: ERRORS.NOT_ASSIGNED,
+    label: I18N.MESSAGES_NOT_ASSIGNED,
+  },
+  {
+    key: ERRORS.DELETED_ACCOUNT,
+    label: I18N.MESSAGES_DELETED_ACCOUNT,
+  },
+  {
+    key: ERRORS.KICKED_OUT,
+    label: I18N.MESSAGES_KICKED_OUT,
+  },
+  {
+    key: ERRORS.WRONG_PHONE_NUMBER_FORMAT,
+    label: I18N.MESSAGES_WRONG_PHONE_NUMBER_FORMAT,
+  },
+  {
+    key: ERRORS.PHONE_INPUT_TOO_LONG,
+    label: I18N.MESSAGES_PHONE_INPUT_TOO_LONG,
+  },
+  {
+    key: ERRORS.TAKEN,
+    label: I18N.MESSAGES_TAKEN,
+  },
+  {
+    key: ERRORS.TOKEN_ERROR,
+    label: I18N.MESSAGES_TOKEN_ERROR,
+  },
+  {
+    key: ERRORS.ORDER_PERMISSION,
+    label: I18N.MESSAGES_ORDER_PERMISSION,
+  },
+  {
+    key: ERRORS.LACK_DRIVER_OR_TRUCK,
+    label: I18N.MESSAGES_LACK_DRIVER_OR_TRUCK,
+  },
+  {
+    key: ERRORS.FINDNEWTRUCK_ERROR_STATUS,
+    label: I18N.MESSAGES_FINDNEWTRUCK_ERROR_STATUS,
+  },
+  {
+    key: ERRORS.NOT_VERIFIED,
+    label: I18N.MESSAGES_NOT_VERIFIED,
+  },
+  {
+    key: ERRORS.FOLDER_NOT_EXISTED,
+    label: I18N.MESSAGES_FOLDER_NOT_EXISTED,
+  },
+  {
+    key: ERRORS.COMPANY_NOT_EXISTED,
+    label: I18N.MESSAGES_COMPANY_NOT_EXISTED,
+  },
+  {
+    key: ERRORS.DRIVER_EXISTED,
+    label: I18N.MESSAGES_DRIVER_EXISTED,
+  },
+  {
+    key: ERRORS.CUSTOMER_CANCEL_ORDER,
+    label: I18N.MESSAGES_CUSTOMER_CANCEL_ORDER,
+  },
+  {
+    key: ERRORS.DRIVER_CANCEL_ORDER,
+    label: I18N.MESSAGES_DRIVER_CANCEL_ORDER,
+  },
+  {
+    key: ERRORS.EMAIL_NOT_VERIFY,
+    label: I18N.MESSAGES_EMAIL_NOT_VERIFY,
+  },
+  {
+    key: ERRORS.PHONE_OTP_VERIFY,
+    label: I18N.MESSAGES_PHONE_OTP_VERIFY,
+  },
+  {
+    key: ERRORS.INCORRECT_OTP,
+    label: I18N.MESSAGES_INCORRECT_OTP,
+  },
+  {
+    key: ERRORS.OTP_EXPIRED,
+    label: I18N.MESSAGES_OTP_EXPIRED,
+  },
+  {
+    key: ERRORS.PHONE_NOT_EXIST,
+    label: I18N.MESSAGES_PHONE_NOT_EXIST,
+  },
+  {
+    key: ERRORS.PICKUP_CODE_INCORRECT,
+    label: I18N.MESSAGES_PICKUP_CODE_INCORRECT,
+  },
+  {
+    key: ERRORS.ADMIN_NOT_FOUND,
+    label: I18N.MESSAGES_ADMIN_NOT_FOUND,
+  },
+  {
+    key: ERRORS.CUSTOMER_NOT_FOUND,
+    label: I18N.MESSAGES_CUSTOMER_NOT_FOUND,
+  },
+  {
+    key: ERRORS.EMPLOYEE_NOT_FOUND,
+    label: I18N.MESSAGES_EMPLOYEE_NOT_FOUND,
+  },
+  {
+    key: ERRORS.EMAIL_NOT_FOUND,
+    label: I18N.MESSAGES_EMAIL_NOT_FOUND,
+  },
+  {
+    key: ERRORS.SERVICE_TYPE_OR_ORDER_TYPE,
+    label: I18N.MESSAGES_SERVICE_TYPE_OR_ORDER_TYPE,
+  },
+  {
+    key: ERRORS.DETAIL_REQUIRED,
+    label: I18N.MESSAGES_DETAIL_REQUIRED,
+  },
+  {
+    key: ERRORS.CARGO_TYPE_OR_NAME,
+    label: I18N.MESSAGES_CARGO_TYPE_OR_NAME,
+  },
+  {
+    key: ERRORS.TRUCK_SPECIAL_OR_QUANTITY,
+    label: I18N.MESSAGES_TRUCK_SPECIAL_OR_QUANTITY,
+  },
+  {
+    key: ERRORS.CONTAINER_REQUIRED,
+    label: I18N.MESSAGES_CONTAINER_REQUIRED,
+  },
+  {
+    key: ERRORS.SUPPER_EXIST,
+    label: I18N.MESSAGES_SUPPER_EXIST,
+  },
+  {
+    key: ERRORS.PICKUP_DROPOFF_NOT_FOUND,
+    label: I18N.MESSAGES_PICKUP_DROPOFF_NOT_FOUND,
+  },
+  {
+    key: ERRORS.INCORRECT_IMPORT_DATA,
+    label: I18N.MESSAGES_INCORRECT_IMPORT_DATA,
+  },
+];

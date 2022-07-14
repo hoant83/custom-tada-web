@@ -1,0 +1,33 @@
+.main {
+  .block {
+    @include media-min($md) {
+      box-shadow: $box-shadow;
+      padding: 25px 10px;
+      margin: 0 0 25px;
+      border-radius: $border-radius-sm;
+    }
+  }
+
+  .block-title {
+    font-size: 22px;
+    line-height: 2;
+    text-align: center;
+    padding: 10px 0;
+    margin: 0 0 30px;
+  }
+
+  .block-actions {
+    text-align: right;
+    padding: 35px 0 0 ;
+    width: 100%;
+    display: block;
+
+    .btn {
+      margin: 0;
+    }
+  }
+
+  .block-content {
+    padding: 0 40px;
+  }
+}

@@ -1,0 +1,147 @@
+$content-box-shadow: $box-shadow;
+$content-border-radius: $border-radius-sm;
+$cms-content-font-size: $font-size-xx;
+$cms-content-line-height: $line-height-xx;
+
+$cms-card-header-bkg: $color-yellow-600;
+$cms-card-header-border: 1px solid $c-white-400;
+$cms-card-header-font-size: 16px;
+// $font-size-lg: 20px;
+// $line-height-lg: 24px;
+
+.cms-static {
+  @include media-min($lg) {
+    padding: 0;
+  }
+
+  .page-title {
+    margin: 0 0 20px;
+
+    h1 {
+      font-size: 22px;
+    }
+  }
+
+  .accordion {
+
+    .card,
+    >.card {
+      border: 0;
+      border-radius: 0;
+    }
+
+    .card-header {
+      background: none;
+      border-bottom: 0;
+      border-top: $cms-card-header-border;
+      font-weight: 500;
+      margin: 0;
+      cursor: pointer;
+      position: relative;
+
+      font-size: $cms-card-header-font-size;
+      padding: 15px 50px 15px 20px;
+
+      &:after {
+        content: $icon-tarrow-left;
+        font-family: $font-icon-family;
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 22px;
+      }
+
+      &.active {
+        background: $cms-card-header-bkg;
+
+        &:after {
+          content: $icon-tarrow-down;
+          font-size: 12px;
+        }
+      }
+    }
+
+    .card-body {
+      line-height: 30px;
+      padding: 25px 20px;
+      border-top: $cms-card-header-border;
+    }
+
+    &:last-child {
+      .card-header {
+        border-bottom: $cms-card-header-border;
+
+        &.active {
+          border-bottom: 0;
+        }
+      }
+    }
+  }
+
+  h5 {
+    margin: 0 0 20px;
+  }
+
+  h6 {
+    margin: 0 0 20px;
+  }
+
+  .cms-sub {
+    margin: 0 0 20px;
+  }
+
+  p {}
+
+  .cms-inner {
+
+    ol,
+    ul,
+    dl {
+      margin: 0;
+      padding: 0 0 0 35px;
+
+      li,
+      dt,
+      dd {
+        margin: 0 0 20px;
+        padding: 0;
+      }
+    }
+  }
+
+  .faq-hightlight {
+    color: red;
+  }
+}
+
+.cms-terms {
+  width: auto;
+
+  @include media-min($sm) {
+    box-shadow: $box-shadow;
+    padding: 15px 25px;
+    margin: 0 15px;
+    border-radius: $content-border-radius;
+  }
+
+  @include media-min($lg) {
+    margin: 0;
+  }
+
+  @include media-min($xl) {
+    padding: 20px 30px;
+  }
+
+  .page-title {
+    margin-right: -15px;
+    margin-left: -15px;
+    text-align: center;
+    padding: 20px 0 0;
+    margin: 0 0 20px;
+  }
+}
+
+.element-id-block {
+  z-index: 10;
+}

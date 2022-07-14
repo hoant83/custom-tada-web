@@ -1,0 +1,85 @@
+$op-background-start: #1d4c5b;
+$op-background-end: #0a2e3d;
+
+#root {
+  height: auto;
+  background: $op-background-start;
+  background: -moz-linear-gradient(90deg,
+      $op-background-start 0,
+      $op-background-end 100%);
+  background: -webkit-linear-gradient(90deg,
+      $op-background-start 0,
+      $op-background-end 100%);
+  background: -o-linear-gradient(90deg,
+      $op-background-start 0,
+      $op-background-end 100%);
+  background: -ms-linear-gradient(90deg,
+      $op-background-start 0,
+      $op-background-end 100%);
+  background: linear-gradient(90deg,
+      $op-background-start 0,
+      $op-background-end 100%);
+}
+
+.one-page .main {
+  box-shadow: 0 32px 70px 0 #061b23;
+}
+
+body {
+  background: $color-truck-bg;
+  // @include background-gradient(
+  //   '90deg',
+  //   $op-background-start,
+  //   $op-background-end
+  // );
+}
+
+.main-menu {
+  background: $color-truck-bg;
+
+  &:after {
+    // @include background-gradient(
+    // '90deg',
+    // $op-background-end,
+    // $op-background-start
+
+    // );
+    background: $color-truck-bg;
+  }
+}
+
+.copyright {
+  color: $white;
+
+  background: $color-truck-bg;
+  // @include background-gradient(
+  //   '90deg',
+  //   $op-background-end,
+  //   $op-background-start
+  // );
+}
+
+.main-menu .item {
+  color: $color-yellow-100;
+}
+
+.main-menu .item.active,
+.main-menu .item:hover {
+  color: $color-yellow-100;
+  background: #2c4154;
+}
+
+.modal-header {
+  background: $color-truck-bg;
+  color: $color-yellow-100;
+}
+
+.btn.btn-dark {
+  background: $color-truck-bg;
+  color: $color-yellow-100;
+
+  &:hover {
+    background: $color-yellow-100;
+    color: $color-truck-bg;
+  }
+}

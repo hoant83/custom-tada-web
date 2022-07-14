@@ -1,0 +1,103 @@
+$op-background-start: #1d4c5b;
+$op-background-end: #0a2e3d;
+#root {
+  height: 100vh;
+  background: $op-background-start;
+  background: -moz-linear-gradient(
+    90deg,
+    $op-background-start 0,
+    $op-background-end 100%
+  );
+  background: -webkit-linear-gradient(
+    90deg,
+    $op-background-start 0,
+    $op-background-end 100%
+  );
+  background: -o-linear-gradient(
+    90deg,
+    $op-background-start 0,
+    $op-background-end 100%
+  );
+  background: -ms-linear-gradient(
+    90deg,
+    $op-background-start 0,
+    $op-background-end 100%
+  );
+  background: linear-gradient(
+    90deg,
+    $op-background-start 0,
+    $op-background-end 100%
+  );
+}
+
+.one-page .main {
+  box-shadow: 0 32px 70px 0 #061b23;
+}
+
+body {
+  background: #1e2e3d;
+  // @include background-gradient(
+  //   '90deg',
+  //   $op-background-start,
+  //   $op-background-end
+  // );
+}
+
+.main-menu {
+  &:after {
+    // @include background-gradient(
+    // '90deg',
+    // $op-background-end,
+    // $op-background-start
+
+    // );
+    background: #1e2e3d;
+  }
+}
+
+.copyright {
+  color: $white;
+
+  background: #1e2e3d;
+  // @include background-gradient(
+  //   '90deg',
+  //   $op-background-end,
+  //   $op-background-start
+  // );
+}
+
+.main-menu .item {
+  color: #fdd70a;
+  display: block;
+}
+.main-menu .item.active,
+.main-menu .item:hover {
+  color: #fdd70a;
+  background: #2c4154;
+}
+
+.admin-actions {
+  padding: 0 0 50px;
+  text-align: right;
+}
+
+.page-wrapper {
+  padding-bottom: 0;
+
+  .main {
+    padding-bottom: 0;
+
+    @include media-min($lg) {
+      width: calc(100% - 140px);
+      padding: 0 40px 80px;
+    }
+  }
+}
+
+.btn {
+  border-radius: $border-radius-sm;
+}
+
+.form {
+  margin: 0 0 50px;
+}

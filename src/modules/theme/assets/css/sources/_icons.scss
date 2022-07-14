@@ -1,0 +1,521 @@
+.ico,
+[class^='icon-'],
+[class*=' icon-'] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: $font-icon-name;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ico-phone {
+  &:before {
+    content: $icon-phone;
+  }
+}
+
+.ico-user-email {
+  &:before {
+    content: $icon-user-email;
+  }
+}
+
+.ico-mg-order {
+  &:before {
+    content: $icon-mg-order;
+  }
+}
+
+.ico-new-order {
+  &:before {
+    content: $icon-new-order;
+  }
+}
+
+.ico-order-info {
+  &:before {
+    content: $icon-order-info;
+  }
+}
+
+.ico-assign {
+  &:before {
+    content: $icon-assign;
+  }
+}
+
+.ico-job {
+  &:before {
+    content: $icon-job;
+  }
+}
+
+.ico-o-close {
+  &:before {
+    content: $icon-o-close;
+  }
+}
+
+.ico-o-down {
+  &:before {
+    content: $icon-o-down;
+  }
+}
+
+.ico-o-prev {
+  &:before {
+    content: $icon-o-prev;
+  }
+}
+
+.ico-o-up {
+  &:before {
+    content: $icon-o-up;
+  }
+}
+
+.ico-o-next {
+  &:before {
+    content: $icon-o-next;
+  }
+}
+
+.ico-profile {
+  &:before {
+    content: $icon-profile;
+  }
+}
+
+.ico-logout {
+  &:before {
+    content: $icon-logout;
+  }
+}
+
+.ico-term {
+  &:before {
+    content: $icon-term;
+  }
+}
+
+.ico-menu {
+  &:before {
+    content: $icon-menu;
+  }
+}
+
+.ico-accounts {
+  &:before {
+    content: $icon-accounts;
+  }
+}
+
+.ico-add {
+  &:before {
+    content: $icon-add;
+  }
+}
+
+.ico-arrow-down {
+  &:before {
+    content: $icon-arrow-down;
+  }
+}
+
+.ico-arrow-up {
+  &:before {
+    content: $icon-arrow-up;
+  }
+}
+
+.ico-avatar {
+  &:before {
+    content: $icon-avatar;
+  }
+}
+
+.ico-checked {
+  &:before {
+    content: $icon-checked;
+  }
+}
+
+.ico-clone {
+  &:before {
+    content: $icon-clone;
+  }
+}
+
+.ico-delete {
+  &:before {
+    content: $icon-delete;
+  }
+}
+
+.ico-delivered {
+  &:before {
+    content: $icon-delivered;
+  }
+}
+
+.ico-delivery {
+  &:before {
+    content: $icon-delivery;
+  }
+}
+
+.ico-edit {
+  &:before {
+    content: $icon-edit;
+  }
+}
+
+.ico-publish {
+  &:before {
+    content: $icon-publish;
+  }
+}
+
+.ico-email {
+  &:before {
+    content: $icon-email;
+  }
+}
+
+.ico-faq {
+  &:before {
+    content: $icon-faq;
+  }
+}
+
+.ico-find-driver {
+  &:before {
+    content: $icon-find-driver;
+  }
+}
+
+.ico-first {
+  &:before {
+    content: $icon-first;
+  }
+}
+
+.ico-larrow-next {
+  &:before {
+    content: $icon-larrow-next;
+  }
+}
+
+.ico-larrow-prev {
+  &:before {
+    content: $icon-larrow-prev;
+  }
+}
+
+.ico-arrow-down {
+  &:before {
+    content: $icon-arrow-down;
+  }
+}
+
+.ico-last {
+  &:before {
+    content: $icon-last;
+  }
+}
+
+.ico-map-note {
+  &:before {
+    content: $icon-map-note;
+  }
+}
+
+.ico-new-order-2 {
+  &:before {
+    content: $icon-new-order-2;
+  }
+}
+
+.icon-ico-edit-price {
+  &:before {
+    content: $icon-edit-price;
+  }
+}
+
+.icon-ico-vat1 {
+  &:before {
+    content: $icon-vat1;
+  }
+}
+
+.ico-next-2 {
+  &:before {
+    content: $icon-next-2;
+  }
+}
+
+.ico-next {
+  &:before {
+    content: $icon-next;
+  }
+}
+
+.ico-noti-order {
+  &:before {
+    content: $icon-noti-order;
+  }
+}
+
+.ico-noti-system {
+  &:before {
+    content: $icon-noti-system;
+  }
+}
+
+.ico-noti {
+  &:before {
+    content: $icon-noti;
+  }
+}
+
+.ico-o-arrive-pickup {
+  &:before {
+    content: $icon-o-arrive-pickup;
+  }
+}
+
+.ico-credit-card {
+  &:before {
+    content: $icon-credit-card;
+  }
+}
+
+.ico-o-dispatched {
+  &:before {
+    content: $icon-o-dispatched;
+  }
+}
+
+.ico-orders {
+  &:before {
+    content: $icon-orders;
+  }
+}
+
+.ico-password {
+  &:before {
+    content: $icon-password;
+  }
+}
+
+.ico-pickup {
+  &:before {
+    content: $icon-pickup;
+  }
+}
+
+.ico-plus {
+  &:before {
+    content: $icon-plus;
+  }
+}
+
+.ico-prev {
+  &:before {
+    content: $icon-prev;
+  }
+}
+
+.ico-quick {
+  &:before {
+    content: $icon-quick;
+  }
+}
+
+.ico-report {
+  &:before {
+    content: $icon-report;
+  }
+}
+
+.ico-reset {
+  &:before {
+    content: $icon-reset;
+  }
+}
+
+.ico-search {
+  &:before {
+    content: $icon-search;
+  }
+}
+
+.ico-setting {
+  &:before {
+    content: $icon-setting;
+  }
+}
+
+.ico-standard {
+  &:before {
+    content: $icon-standard;
+  }
+}
+
+.ico-start-delivering {
+  &:before {
+    content: $icon-start-delivering;
+  }
+}
+
+.ico-tarrow-down {
+  &:before {
+    content: $icon-tarrow-down;
+  }
+}
+
+.ico-tarrow-left {
+  &:before {
+    content: $icon-tarrow-left;
+  }
+}
+
+.ico-tarrow-right {
+  &:before {
+    content: $icon-tarrow-right;
+  }
+}
+
+.ico-tarrow-up {
+  &:before {
+    content: $icon-tarrow-up;
+  }
+}
+
+.ico-update {
+  &:before {
+    content: $icon-update;
+  }
+}
+
+.ico-upload {
+  &:before {
+    content: $icon-upload;
+  }
+}
+
+.ico-chevron-with-circle-down {
+  &:before {
+    content: $icon-chevron-with-circle-down;
+  }
+}
+
+.ico-chevron-with-circle-left {
+  &:before {
+    content: $icon-chevron-with-circle-left;
+  }
+}
+
+.ico-chevron-with-circle-right {
+  &:before {
+    content: $icon-chevron-with-circle-right;
+  }
+}
+
+.ico-chevron-with-circle-up {
+  &:before {
+    content: $icon-chevron-with-circle-up;
+  }
+}
+
+.ico-yes-circle {
+  &:before {
+    content: $icon-yes-circle;
+  }
+}
+
+.ico-import {
+  &:before {
+    content: $icon-import;
+    font-size: 24px;
+    font-weight: 700;
+  }
+}
+
+.ico-next-solid {
+  &:before {
+    content: $icon-next-solid;
+  }
+}
+
+.ico-down-solid {
+  &:before {
+    content: $icon-down-solid;
+  }
+}
+
+.ico-quotation {
+  &:before {
+    content: $icon-quotation;
+  }
+}
+
+.ico-tracking {
+  &:before {
+    content: $icon-tracking;
+  }
+}
+
+.ico-verified {
+  &:before {
+    font-size: 24px;
+    font-weight: 700;
+    content: $icon-verified;
+  }
+}
+
+.trigger-right {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.ico-trigger {
+  font-size: 20px;
+  border: solid 1px rgba(221, 221, 221, 0.65);
+  padding: 3px;
+  border-radius: 3px;
+  color: rgb(152, 137, 137);
+
+  &.ico-down {
+    transform: rotate(180deg);
+  }
+}
+
+.icon-ico-vat1 {
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.icon-ico-edit-price {
+  font-size: 30px;
+}
+
+.sort-icon {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  i {
+    &:first-child {
+      margin-bottom: 2px;
+    }
+    font-size: 8px;
+  }
+}

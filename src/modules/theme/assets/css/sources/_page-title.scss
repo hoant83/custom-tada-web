@@ -1,0 +1,101 @@
+// $font-size-xxl: 36px;
+// $line-height-xxl: 44px;
+// $font-size-lg: 20px;
+// $line-height-lg: 24px;
+// $c-white-700
+// $font-size-sm: 14px;
+// $line-height-sm: 17px;
+$font-size-sm-other: 28px;
+$font-size-lg-other: 22px;
+$page-subtitle-color: $c-white-700;
+$page-title-font-size: $font-size-lg-other;
+$block-time-item-font-size: 18px;
+
+.page-title-wrapper {
+  margin: 0 0 20px;
+
+  @include media-min($lg) {
+    padding: 0;
+  }
+
+  .row {
+    div {
+      z-index: 5;
+    }
+  }
+}
+
+.page-title {
+  font-size: $page-title-font-size;
+  margin: 0 0 7px;
+}
+
+.page-subtitle {
+  font-size: $font-size-sm;
+  color: $page-subtitle-color;
+}
+
+.block-time {
+  @include media-min($md) {
+    text-align: right;
+  }
+
+  &.card {
+    border: 0;
+  }
+
+  .card-body {
+    padding: 0;
+  }
+
+  .item-time {
+    font-size: $block-time-item-font-size;
+    margin: 0 0 5px;
+  }
+
+  .item-day {
+    font-size: $font-size-sm;
+    color: $c-white-700;
+  }
+}
+
+.element-id-block {
+  position: absolute;
+  border: 2px solid grey;
+  border-radius: 10px;
+  padding: 14px;
+  margin-top: -11px;
+  display: block;
+  z-index: 0;
+
+  .element-page-name {
+    padding-right: 20px;
+  }
+
+  .element-page-id {
+    padding-left: 20px;
+    font-weight: bold;
+  }
+
+  @media (min-width: $xxl) {
+    margin-right: 20em;
+  }
+
+  @media (min-width: $xl) and (max-width: ($xxl - 1)) {
+    margin-right: 8.5em;
+  }
+
+  @media (min-width: $sm) and (max-width: ($md - 1)) {
+    position: static;
+    margin-right: 19em;
+    margin-top: 2px;
+    margin-bottom: 10px;
+  }
+
+  @media (max-width: ($sm)) {
+    position: static;
+    margin-right: 13em;
+    margin-top: 2px;
+    margin-bottom: 10px;
+  }
+}

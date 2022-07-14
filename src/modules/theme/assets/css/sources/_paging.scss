@@ -1,0 +1,161 @@
+.pagination {
+  display: block;
+  text-align: center;
+  clear: both;
+  margin: 0 0 30px;
+
+  @include media-min($sm) {
+    text-align: right;
+  }
+
+  .page-prev,
+  .page-next,
+  .page-last,
+  .page-first {
+    .page-link {
+      border: 1px solid $color-yellow-200;
+      border-radius: $border-radius-sm;
+      white-space: nowrap;
+      line-height: 1;
+      padding: 10px 14px;
+      margin: 0 7px 15px;
+      color: $color-yellow-200;
+    }
+  }
+
+  .page-next,
+  .page-prev {
+    span span {
+      display: none;
+    }
+
+    &.disabled span span {
+      display: block;
+
+      span {
+        display: none;
+      }
+    }
+  }
+
+  .page-item {
+    display: inline-block;
+    text-align: center;
+
+    .ico {
+      font-size: 14px;
+    }
+
+    &.disabled {
+      .page-link {
+        color: #e2e2e2;
+        border-color: #e2e2e2;
+      }
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    .page-link:focus {
+      box-shadow: none;
+    }
+  }
+
+  .page-number {
+    background: #fef3d3;
+
+    .page-link {
+      padding: 12px 10px;
+      color: $text-color;
+      border: 0;
+      background: transparent;
+      border-radius: $border-radius-sm;
+      min-width: 42px;
+    }
+
+    &:first-child {
+      .page-link {
+        padding: 12px 10px;
+      }
+    }
+
+    &:last-child {
+      .page-link {
+        padding: 15px 20px;
+      }
+    }
+
+    &:nth-child(3) {
+      border-radius: $border-radius-sm 0 0 $border-radius-sm;
+      margin-left: 10px;
+
+      .page-link {
+        margin-left: 0;
+      }
+    }
+
+    &:nth-last-child(3) {
+      border-radius: 0 $border-radius-sm $border-radius-sm 0;
+      margin-right: 10px;
+
+      .page-link {
+        margin-right: 0;
+      }
+    }
+
+    &.active {
+      .page-link {
+        @include background-gradient('90deg',
+          $op-background-start,
+          $op-background-end);
+        border-color: transparent;
+        color: $text-color;
+      }
+    }
+  }
+
+  .page-first {
+    .ico {
+      margin: 0 15px 0 0;
+    }
+  }
+
+  .page-last {
+    .ico {
+      margin: 0 0 0 15px;
+    }
+  }
+
+  .page-first,
+  .page-last {
+    display: none;
+
+    @include media-min($md) {
+      display: inline-block;
+    }
+  }
+
+  .page-next,
+  .page-prev {
+    .page-link {
+      margin: 0 -8px 20px;
+
+      @include media-min($sm) {
+        margin: 0 7px 15px;
+      }
+    }
+  }
+
+  .page-link {
+    color: $color-yellow-200;
+
+    &:hover {
+      @include background-gradient('90deg',
+        $op-background-start,
+        $op-background-end);
+      border-color: transparent;
+      color: $text-color;
+    }
+  }
+}

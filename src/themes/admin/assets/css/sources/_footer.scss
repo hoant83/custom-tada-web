@@ -1,0 +1,27 @@
+// AdminFooter Component
+.admin-footer {
+  background: #e1e1e1;
+  border-top: 2px solid #cecece;
+  padding: 20px 30px 1px;
+  text-align: right;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+
+  @include media-min($lg) {
+    position: absolute;
+    bottom: 0;
+    left: 140px;
+    width: calc(100% - 140px);
+  }
+
+  address {
+    float: left;
+    margin: 0 0 20px;
+  }
+
+  p {
+    margin: 0 0 20px;
+  }
+}

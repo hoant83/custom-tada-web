@@ -1,0 +1,257 @@
+$form-control-color: #7e7e7e;
+$form-border-color: #efefef;
+$form-control-readonly-color: $c-white-300;
+
+.form-custom {
+  @include media-min($xl) {
+    margin: 0 0 30px;
+  }
+
+  .form-label {
+    display: block;
+    margin: 0 0 10px;
+
+    @include media-min($xlg) {
+      display: inline-block;
+      width: 240px;
+      vertical-align: middle;
+      margin: 0;
+      line-height: 2;
+      min-width: auto;
+      padding: 7px 0 0;
+    }
+  }
+
+  .form-row {
+    padding: 20px 0;
+    margin: 0 0 10px;
+
+    @include media-min($md) {
+      padding: 30px 10px;
+      margin: 0 0 30px;
+    }
+
+    .row {
+      @include media-min($xxl) {
+        margin: 0 -15px 20px;
+      }
+    }
+  }
+
+  input[type='checkbox']:not(:checked) + .form-check-label {
+    color: $form-control-color;
+  }
+
+  .form-check-inline {
+    margin: 0 20px 0 0;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  .form-group {
+    // margin: 0 0 20px;
+
+    // @include media-min($xxl) {
+    //   margin: 0 0 5px;
+    // }
+
+    &.form-group-inline {
+      .form-label {
+        width: auto;
+      }
+    }
+
+    &.form-group-block {
+      .form-label {
+        display: block;
+        width: 100%;
+      }
+    }
+
+    &.col-lg-5 {
+      .form-label {
+        width: 210px;
+      }
+
+      .form-control {
+        @include media-min($xlg) {
+          width: calc(100% - 210px);
+        }
+      }
+    }
+  }
+
+  .form-actions {
+    padding: 0;
+  }
+
+  .form-control {
+    // color: $form-control-color;
+    padding: 10px 15px;
+
+    @include media-min($xlg) {
+      display: inline-block;
+      width: calc(100% - 250px);
+    }
+  }
+
+  .form-control:disabled,
+  .form-control[readonly] {
+  }
+
+  .form-control[readonly] {
+    background: none;
+    padding: 0;
+    color: $form-control-readonly-color;
+  }
+
+  .account-status {
+    display: inline-block;
+    color: $form-control-color;
+    margin: 0;
+  }
+
+  .service-info {
+    padding: 20px 0 10px;
+
+    &:after {
+      background: $form-border-color;
+      height: 1px;
+      width: calc(100% - 30px);
+      position: absolute;
+      bottom: 0;
+      left: 15px;
+      content: '';
+    }
+
+    @include media-min($md) {
+      padding: 30px 20px 20px;
+
+      &:after {
+        display: none;
+      }
+    }
+
+    .block-title {
+      text-align: center;
+      padding: 0 15px;
+      display: block;
+      width: 100%;
+      margin: 0 0 20px;
+
+      @include media-min($md) {
+        padding: 0;
+      }
+    }
+
+    .form-custom & .form-check-inline {
+      margin: 0 20px 20px 0;
+    }
+
+    .form-check-inline {
+      margin: 0 20px 20px 0;
+    }
+
+    .form-group {
+      padding: 0 5px;
+    }
+  }
+
+  .form-group.serviceType {
+    margin: 0;
+  }
+
+  .was-validated .form-control:invalid + .invalid-feedback,
+  .form-control.is-invalid + .invalid-feedback {
+    @include media-min($xlg) {
+      padding-left: 240px;
+    }
+  }
+
+  .form-group.col-lg-5 .was-validated .form-control:invalid + .invalid-feedback,
+  .form-group.col-lg-5 .form-control.is-invalid + .invalid-feedback {
+    @include media-min($xlg) {
+      padding-left: 210px;
+    }
+  }
+}
+
+.modal-custom {
+  .form-group {
+    margin: 0 0 20px;
+  }
+
+  .form-actions {
+    padding: 0 15px;
+    margin: 0 0 -15px;
+
+    @include media-min($xlg) {
+      margin: 35px 0 -15px;
+    }
+  }
+}
+
+.my-favourite {
+  .block-info {
+    text-align: center;
+    margin: 0 auto 30px;
+    max-width: 900px;
+  }
+
+  .form-custom {
+    padding: 0;
+    position: relative;
+    max-width: 1090px;
+
+    .form-group {
+      display: inline-block;
+    }
+
+    .form-label {
+      @include media-min($xl) {
+        width: 305px;
+        padding: 12px 0 0;
+        margin: 0 20px 0 0;
+        display: inline-block;
+        vertical-align: middle;
+      }
+    }
+
+    .form-control {
+      display: inline-block;
+      width: calc(100% - 60px);
+
+      @include media-min($xl) {
+        width: calc(100% - 570px);
+      }
+    }
+
+    .form-actions {
+      display: inline-block;
+      position: absolute;
+      right: 15px;
+      top: 33px;
+      width: 48px;
+
+      @include media-min($xl) {
+        left: calc(100% - 245px);
+        top: 0;
+        right: auto;
+      }
+
+      .btn {
+        padding: 12px 10px;
+        min-width: 0;
+        margin: 0;
+        width: 46px;
+      }
+
+      .btn .ico {
+        right: 0;
+        margin: 0;
+      }
+    }
+  }
+}

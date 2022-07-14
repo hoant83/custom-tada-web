@@ -1,0 +1,78 @@
+import { I18N } from '@/modules/lang/i18n.enum';
+
+export enum THANKYOU_ACTION {
+  REGISTER = 'register',
+  RESET_PASSWORD = 'resetpassword',
+}
+
+export enum ACCOUNT_TYPE {
+  COMPANY = I18N.CUSTOMER_TYPE_COMPANY,
+  INDIVIDUAL = I18N.CUSTOMER_TYPE_INDIVIDUAL,
+}
+
+export enum ACCOUNT_ROLE {
+  OWNER,
+  EXECUTIVE,
+  ADMIN,
+}
+
+export enum VERIFIED_STATUS {
+  UNVERIFIED,
+  PENDING,
+  VERIFIED,
+}
+
+export enum USER_STATUS {
+  ACTIVE, // active
+  INACTIVE, // suspended by admin
+}
+
+export enum PAYMENT_TYPE {
+  INSTANT_CASH,
+  INSTANT_BANK,
+  POST_PAID_15,
+  POST_PAID_30,
+  POST_PAID_45,
+  OTHER,
+}
+export const paymentTypes = [
+  {
+    key: PAYMENT_TYPE.INSTANT_CASH,
+    label: I18N.DEFAULT_INSTANT_CASH,
+  },
+  {
+    key: PAYMENT_TYPE.INSTANT_BANK,
+    label: I18N.DEFAULT_INSTANT_BANK,
+  },
+  {
+    key: PAYMENT_TYPE.POST_PAID_15,
+    label: I18N.DEFAULT_POST_PAID_15,
+  },
+  {
+    key: PAYMENT_TYPE.POST_PAID_30,
+    label: I18N.DEFAULT_POST_PAID_30,
+  },
+  {
+    key: PAYMENT_TYPE.POST_PAID_45,
+    label: I18N.DEFAULT_POST_PAID_45,
+  },
+  {
+    key: PAYMENT_TYPE.OTHER,
+    label: I18N.DEFAULT_OTHER,
+  },
+];
+
+export const paymentType = [
+  {
+    key: '',
+    label: I18N.DEFAULT_PAYMENT_TYPE_PLACEHOLDER,
+  },
+  ...paymentTypes,
+];
+
+export enum CUSTOMER_ACCOUNT_TYPE {
+  CORPORRATE = I18N.CUSTOMER_TYPE_CORPORATE,
+  INDIVIDUAL = I18N.CUSTOMER_TYPE_INDIVIDUAL,
+  LOGISTIC_FORWARDER = I18N.CUSTOMER_TYPE_LOGISTIC_FORWARDER,
+  BUSINESS_PARTNER = I18N.CUSTOMER_TYPE_BUSINESS_PARTNER,
+}

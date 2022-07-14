@@ -1,0 +1,152 @@
+.modal-multiple-order {
+  .modal-dialog {
+    max-width: 992px;
+  }
+}
+
+.modal-content {
+  border: 0;
+  border-radius: $border-radius-sm;
+}
+
+.modal-header {
+  background: $color-yellow-200;
+  color: $text-color;
+  border-radius: $border-radius-sm $border-radius-sm 0 0;
+  text-align: center;
+  font-size: 20px;
+  display: block;
+  font-weight: 600;
+}
+
+.modal-body {
+  padding: 30px;
+
+  .block-actions {
+    padding: 30px 0 0;
+    text-align: center;
+    display: block;
+  }
+
+  .list-group-item {
+    border: 0;
+    border-bottom: 1px solid $c-white-200;
+    padding: 10px 0;
+  }
+
+  .list-group {
+    .item-label {
+      font-weight: 500;
+      font-size: 16px;
+      display: block;
+      margin: 0 0 10px;
+    }
+
+    .item-value {
+      color: $c-white-900;
+      display: block;
+      font-style: italic;
+      text-align: right;
+    }
+  }
+
+  .modal-actions {
+    padding: 10px 0 0;
+    text-align: center;
+    display: block;
+
+    .btn {
+      margin: 0 20px 20px 0;
+    }
+  }
+
+  .form {
+    margin: 0 -20px;
+
+    .form-label,
+    .form-control,
+    .custom-file {
+      width: 100%;
+    }
+
+    .was-validated .form-control:invalid + .invalid-feedback,
+    .form-control.is-invalid + .invalid-feedback {
+      padding-left: 0;
+    }
+
+    button:focus {
+      outline: none;
+    }
+  }
+
+  .form-group {
+    position: relative;
+    padding-bottom: 15px;
+    margin: 0 0 15px;
+
+    @include media-min($xlg) {
+      margin: 0 0 5px;
+    }
+
+    &:after {
+      background: #f2f2f2;
+      content: '';
+      display: block;
+      height: 1px;
+      width: calc(100% - 30px);
+      position: absolute;
+      bottom: 0;
+    }
+  }
+
+  .multi-select {
+    width: 100%;
+
+    @include media-min($xlg) {
+      padding-top: 10px;
+    }
+  }
+
+  .modal-footer {
+    text-align: center;
+  }
+}
+
+.fade.modal.show {
+  display: block !important;
+}
+
+.multiple-wrapper {
+  text-align: center;
+  padding: 70px;
+  .multiple-item {
+    text-align: left;
+    .box {
+      margin-left: 25px;
+    }
+  }
+  .upload-multiple-button {
+    text-align: right;
+    position: absolute;
+    right: 45px;
+    bottom: 60px;
+  }
+}
+
+.modal-close-right {
+  position: absolute !important;
+  top: 10px;
+  right: 30px;
+}
+
+.modal-admin {
+  .modal-content {
+    padding-bottom: 25px;
+  }
+  .form-group {
+    max-width: 50%;
+    float: left;
+    padding-top: 10px;
+    z-index: 20;
+  }
+}

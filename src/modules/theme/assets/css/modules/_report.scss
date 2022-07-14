@@ -1,0 +1,15 @@
+.block-chart {
+  text {
+    font-family: $font-family-base !important;
+    font-weight: 500;
+    // font-size: 16px;
+  }
+  .apexcharts-legend-text {
+    font-family: $font-family-base !important;
+  }
+
+  .apexcharts-legend {
+    top: 45px !important;
+    //width: 150px !important;
+  }
+}

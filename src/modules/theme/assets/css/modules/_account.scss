@@ -1,0 +1,107 @@
+$op-form-border-color: $c-white-350;
+
+.block-thank-you {
+  .card {
+    display: block;
+    text-align: center;
+    border: 0;
+    border-radius: 0;
+    margin: -15px 0 0;
+  }
+
+  .card-img-top {
+    display: inline-block;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 0 -90px -20px;
+  }
+
+  .card-body {
+    padding: 0;
+  }
+
+  .block-title {
+    // font-size: 42px;
+    // line-height: 52px;
+    // margin: 0 0 15px;
+    margin: 0 0 5px;
+  }
+
+  .block-subtitle {
+    // font-size: 25px;
+    // line-height: 32px;
+    // margin: 0 0 25px;
+    font-size: 16px;
+    margin: 0 0 15px;
+  }
+
+  .block-content {
+    // font-size: 20px;
+    // line-height: 32px;
+  }
+}
+
+.block-verify-otp {
+  .card {
+    display: block;
+    text-align: center;
+    border: 0;
+    border-radius: 0;
+    margin: -15px 0 0;
+  }
+
+  .block-title {
+    // font-size: 42px;
+    // line-height: 52px;
+    // margin: 0 0 15px;
+    margin: 0 0 5px;
+  }
+
+  .card-body {
+    padding: 0;
+  }
+
+  .input-otp {
+    padding: 5px 10px;
+    margin-bottom: 15px;
+
+    input {
+      width: 30px !important;
+      height: 40px;
+      font-size: 24px;
+      color: #0a2e3d;
+      outline: none;
+      border: 0;
+      border-bottom: 1px solid $op-form-border-color;
+      background: none;
+      border-radius: 0;
+      background-image: none !important;
+
+      &:focus,
+      &:hover {
+        box-shadow: none;
+        border: 0;
+        border-bottom: 1px solid $op-form-focus-border-color;
+        background: none;
+        border-radius: 0;
+      }
+    }
+  }
+}
+
+.thank-you-page,
+.verify-truckowner-otp-page {
+  .main {
+    //same color verify-truckowner-otp-page
+    background: $thankyou-bkg;
+
+    @include media-min($lg) {
+      min-height: 770px;
+    }
+  }
+}
+
+.resend-otp-link {
+  position: absolute;
+  margin-left: 8px;
+}
